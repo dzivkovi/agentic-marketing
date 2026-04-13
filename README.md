@@ -22,7 +22,7 @@ At **Tangerine Bank**, after their independence from ING, I helped unify two dis
 
 ![Fishing - where it all started](<images/fishing.jpg>)
 
-I was never the closer. I built the pipeline - the system that found the right people and got them to the table. Two decades later, that's exactly what I'm doing at enterprise scale: decomposing marketing into [8 operating verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs), scoring 40+ activities by how much AI can help, and mapping the skills that make agentic marketing real - from solo operator to global brand.
+I was never the closer. I built the pipeline - the system that found the right people and got them to the table. Two decades later, that's exactly what I'm doing at enterprise scale: decomposing marketing into [8 operating verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs), scoring 40+ activities by how much AI can help, and mapping the skills that make agentic marketing real - from solo operator to global enterprise.
 
 ---
 
@@ -48,6 +48,21 @@ Every recommendation in this framework is anchored to these non-negotiable princ
 7. **Observability is Day 1, not Day 2.** Guardrails, evals, and tracing ship with the first skill.
 
 The full reasoning behind each commandment is in [Section 1 of the Anatomy](research/Marketing-Anatomy.md#1-the-7-commandments).
+
+---
+
+## The 8 Marketing Verbs
+
+These eight activities recur across most marketing organizations, from solo operator to global enterprise. Each maps to scored activities and size-fit guidance in [the Anatomy](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs).
+
+1. **SENSE** - Watch the market for signals.
+2. **KNOW** - Build and maintain audience intelligence.
+3. **DECIDE** - Choose what to say, to whom, when, for how much.
+4. **MAKE** - Produce the assets and survive compliance review.
+5. **SHIP** - Push to channels, on schedule, in the right language.
+6. **MULTIPLY** - Reshape and personalize what you already made.
+7. **MEASURE** - Attribute, dashboard, analyze.
+8. **LEARN** - Close the loop, update the playbook.
 
 ---
 
