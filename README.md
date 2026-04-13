@@ -89,6 +89,7 @@ The [skills roadmap](skills/README.md) lists the T1 Quick Wins targeted for firs
 | --- | --- |
 | [ABOUT.md](ABOUT.md) | The full origin story: from fishing to real estate marketing to enterprise AI architecture |
 | [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) | Curated list of marketing agent skills, tools, and resources - organized by the 8 verbs |
+| [CURATION-LOG.md](CURATION-LOG.md) | Editorial journal: caveats, gaps, patterns, and open questions discovered while curating the skills list |
 | [research/Marketing-Anatomy.md](research/Marketing-Anatomy.md) | The core framework: 7 commandments, 8 verbs, scored inventory, execution model, NFR defense |
 | [research/Marketing-Vendors-By-Category.md](research/Marketing-Vendors-By-Category.md) | Living companion doc: vendors and tools per marketing verb, with size-tier fit |
 | [skills/](skills/) | Roadmap and future home for SKILL.md files per marketing activity |
