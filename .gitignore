@@ -1,0 +1,22 @@
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.zip
+*.tar.gz
+*.log
+*.tmp
+*.mp4
+*.m4a
+
+# Private source materials — never commit regardless of folder location
+consolidated_chat.md
+
+# Generated files
+print/
+work/
+plans/
+
+# Personal Claude Code settings (project settings.json is shared)
+.claude/settings.local.json
+
