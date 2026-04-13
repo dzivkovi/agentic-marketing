@@ -52,7 +52,7 @@ Copy, video, imagery, landing pages, email bodies, decks, social creatives. This
 
 ### 2.5 SHIP: Push to channels, on schedule, in the right language
 
-The distribution layer: owned (website, email, app), earned (PR, organic social, influencer), paid (programmatic, social ads, search ads, broadcast). This is where the calendar becomes execution, where localization kicks in for global brands, and where lifecycle orchestration decides which customer sees what next. Ship is not an afterthought - for most large brands, 40-60% of the marketing budget is actually spent here (media planning & buying).
+The distribution layer: owned (website, email, app), earned (PR, organic social, influencer), paid (programmatic, social ads, search ads, broadcast). This is where the calendar becomes execution, where localization kicks in for global brands, and where lifecycle orchestration decides which customer sees what next. Ship is not an afterthought - distribution is often one of the largest budget buckets in mature marketing organizations.
 
 ### 2.6 MULTIPLY: Reshape and personalize what you already made
 
@@ -212,7 +212,7 @@ This document is itself a Phase 1 / Phase 2 artifact: it's the catalyst that unb
 
 As Andrej Karpathy and other industry leaders have noted, we have entered the era of **Software 3.0** - a paradigm where English is the new programming language and natural language acts as an executable specification. Consequently, the traditional waterfall methodology - where business users hand off abstract requirements for IT to translate into hardcoded logic - is fundamentally broken.
 
-Today, the business requirement *is* the code. To automate tedious, repetitive, or complex workflows, business stakeholders must capture and codify their tacit knowledge into Standard Operating Procedures. In the age of agentic AI, **SOPs are no longer static reference documents - they are executable AI infrastructure.** Leading enterprises are already deploying "Agent SOPs" as structured Markdown or YAML documents containing plain-English constraints that agents execute directly.
+Today, the business requirement *is* the code. To automate tedious, repetitive, or complex workflows, business stakeholders must capture and codify their tacit knowledge into Standard Operating Procedures. In the age of agentic AI, **SOPs are no longer static reference documents - they are executable AI infrastructure.** Amazon's internal teams and other early adopters are deploying "[Agent SOPs](https://aws.amazon.com/blogs/opensource/introducing-strands-agent-sops-natural-language-workflows-for-ai-agents/)" as structured Markdown or YAML documents containing plain-English constraints that agents execute directly.
 
 However, forcing business users to codify their own processes from a blank page routinely fails. Human workflows rely heavily on implicit knowledge, undocumented edge cases, and intuition. This is the "show me what you have and I'll tell you what I want" pattern every experienced consultant has lived through.
 
@@ -234,9 +234,9 @@ In traditional architecture, business logic is hardcoded into proprietary applic
 - **Logic** - the deterministic rules, constraints, and plain-English operating procedures defined by the business
 - **Tools** - the specific system connectors the agent is authorized to invoke
 
-The industry has rapidly converged on the **Anthropic Skill Specification**, centralized in repositories like AgenticSkills.io, as the de facto format. In a matter of months it was adopted across every major vendor and execution framework - a convergence driven by the same appetite that made MCP (Model Context Protocol) universal.
+The industry has rapidly converged on the **Anthropic Skill Specification**, centralized in repositories like [AgenticSkills.io](https://agentskills.io), as the de facto format. In a matter of months it was adopted across a growing number of agent products and execution tools - a convergence driven by the same appetite that made MCP (Model Context Protocol) a widely supported standard.
 
-**The Skill is the brain. MCP is the nervous system.** MCP, now managed under the Anthropic Foundation, is the open-source standard that dictates how AI models securely connect to external tools and enterprise data sources. The Skill says *what* the agent should do and *when*; MCP handles the secure *how* of reaching the legacy CMS, DAM, or CRM. Together, the two standards give the enterprise total portability: the same "Campaign Brief Generation" skill can run on Claude Enterprise, Databricks Mosaic AI, or Microsoft Azure without rewriting the business logic. That is the defense against vendor lock-in.
+**The Skill is the brain. MCP is the nervous system.** MCP, an open protocol that joined the [Agentic AI Foundation](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/) (a directed fund under the Linux Foundation) in December 2025, standardizes how AI models securely connect to external tools and enterprise data sources. The Skill says *what* the agent should do and *when*; MCP handles the secure *how* of reaching the legacy CMS, DAM, or CRM. Together, the two standards give the enterprise total portability: the same "Campaign Brief Generation" skill can run on Claude Enterprise, Databricks Mosaic AI, or Microsoft Azure without rewriting the business logic. That is the defense against vendor lock-in.
 
 ### 4.4 The Execution Platform Spectrum
 

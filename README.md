@@ -22,7 +22,7 @@ At **Tangerine Bank**, after their independence from ING, I helped unify two dis
 
 ![Fishing - where it all started](<images/fishing.jpg>)
 
-I was never the closer. I built the pipeline - the system that found the right people and got them to the table. Two decades later, that's exactly what I'm doing at enterprise scale: decomposing marketing into [8 universal verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs), scoring 40+ activities by how much AI can help, and mapping the skills that make agentic marketing real - from solo operator to global brand.
+I was never the closer. I built the pipeline - the system that found the right people and got them to the table. Two decades later, that's exactly what I'm doing at enterprise scale: decomposing marketing into [8 operating verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs), scoring 40+ activities by how much AI can help, and mapping the skills that make agentic marketing real - from solo operator to global brand.
 
 ---
 
@@ -30,8 +30,24 @@ I was never the closer. I built the pipeline - the system that found the right p
 
 This is my personal Anatomy of marketing AI architecture - and I'm keeping it open source. The goal is twofold:
 
-1. **If you're figuring out marketing AI on your own**, this gives you the map: what every marketer does (8 universal verbs), which activities AI can help with today, and whether you should DIY, hire, or buy at your size.
+1. **If you're figuring out marketing AI on your own**, this gives you the map: what every marketer does (8 marketing verbs), which activities AI can help with today, and whether you should DIY, hire, or buy at your size.
 2. **If you're considering working with me**, this shows you how I think about the problem before we ever meet - so our first conversation starts with substance, not a blank page.
+
+---
+
+## The 7 Commandments
+
+Every recommendation in this framework is anchored to these non-negotiable principles - each one a reaction to a real failure mode, not an aspiration.
+
+1. **Empathy before architecture.** Discovery and definition come before any boxes on a diagram.
+2. **Catalyst, not blank page.** Arrive with working samples so stakeholders react, not stare.
+3. **Co-Create - don't ping-pong.** Business owns the logic in plain text; IT owns the governance wrapper.
+4. **Decouple logic from platform.** The Agentic Skill is the portable unit - avoid unnecessary vendor lock-in.
+5. **Augment, don't replace.** Agents produce drafts; humans approve anything that changes state.
+6. **Default-deny MCP writes.** Read-only by default. Write access requires explicit authorization.
+7. **Observability is Day 1, not Day 2.** Guardrails, evals, and tracing ship with the first skill.
+
+The full reasoning behind each commandment is in [Section 1 of the Anatomy](research/Marketing-Anatomy.md#1-the-7-commandments).
 
 ---
 

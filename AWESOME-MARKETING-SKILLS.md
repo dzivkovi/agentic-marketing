@@ -1,6 +1,6 @@
 # Awesome Marketing Skills
 
-> Curated skills, tools, and resources for AI-powered marketing - organized by the [8 universal marketing verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs). Built on the [Agent Skills](https://agentskills.io) open standard.
+> Curated skills, tools, and resources for AI-powered marketing - organized by the [8 marketing verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs). Built on the [Agent Skills](https://agentskills.io) open standard.
 
 This is a living list. It grows as the ecosystem grows. Contributions welcome.
 
@@ -24,7 +24,7 @@ Complete marketing skill collections that work with Claude Code, Codex, Gemini C
 
 ## By Verb
 
-Skills and tools mapped to the [8 universal marketing verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs) from the Anatomy framework. Each verb represents a universal activity every marketing organization performs.
+Skills and tools mapped to the [8 marketing verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs) from the Anatomy framework. Each verb represents a recurring activity that spans marketing organizations of every size.
 
 ### SENSE: Watch the water for signals
 
