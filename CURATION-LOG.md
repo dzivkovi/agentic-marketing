@@ -8,6 +8,64 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ---
 
+## 2026-04-18
+
+### Second deep audit pass: regulated-enterprise screening of the curated ecosystem
+
+Ran a second deep audit pass (following the 2026-04-17 adversarial audit). Method: four parallel research streams (Adobe Summit ecosystem, Adobe 72-skills catalogue deep-dive, practitioner-sourced rubric from six named authorities, regulatory-grounded enterprise screen), screening of the 29-skill shortlist plus Adobe's 16 marketing-adjacent skills, gap analysis against six regulated-enterprise jobs-to-be-done. Findings summarised as patterns below; the detailed scorecard and briefing package stay private per the editorial decision that internal scorecards are gitignored while pattern-level observations are public.
+
+### Pattern 1: catalog counts drift fast when the source repo is moving
+
+The awesome list's Adobe entry cited 17 skills. The actual clone on 2026-04-17 had 72 skills. This is not a miscount; it is a fast-moving repo that added plugin bundles since the awesome list was last refreshed. Mirrors the earlier star-drift observation from the 2026-04-17 adversarial audit. Refresh catalogue counts at publish time via `gh api` or a local clone walk; do not treat last month's count as current.
+
+### Pattern 2: spec compliance is a variance axis within "reputable" authors
+
+Not all reputable authors keep their SKILL.md frontmatter complete. One author in the ecosystem shipped 13 of 21 skills without a populated `description` field at audit time. This is surprisingly common among authors who prioritise executable code over metadata. Treat frontmatter completeness as an independent axis when ranking; do not let overall repo quality halo over per-skill structural compliance.
+
+### Pattern 3: near-duplicate skill families appear both in open and vendor repos
+
+A well-known open-source author ships three CRO skills (onboarding, page, paywall-upgrade) that follow an identical structure with the topic noun swapped. Adobe does the same thing at much larger scale: seven workflow skills and seven dispatcher skills mirrored across AEM 6.5 LTS and Cloud Service. Open authors fork for topic variation; Adobe forks for platform version. Both produce shortlists that over-count unique capability and under-count real coverage.
+
+Lesson: when counting, collapse near-duplicates before reporting. When tiering, one slot per template family is usually enough.
+
+### Pattern 4: star count correlates with visibility, not enterprise-readiness
+
+Applying a 10-point regulatory-grounded enterprise screen (OSFI B-10, PCI-DSS 4.0, EU AI Act Articles 14 and 50, NIST AI RMF, Gartner, Forrester) to the 29-skill shortlist produced results where 22-star and 5k-star repos scored within 1 gate of 21.8k-star market leaders on governance rigor. The best-scoring skill overall (10 of 10 gates) was a customer-research skill inside the largest repo; the next tier included a 5k-star solo-author SEO skill ahead of several 22k-star siblings because its SKILL.md explicitly cited Google's March 2024 Scaled Content Abuse enforcement policy.
+
+Lesson: star count is a visibility filter, not a governance filter. For regulated-enterprise selection, the screen does useful work that popularity does not.
+
+### Pattern 5: Agent Skills is on track to be the de-facto cross-vendor standard
+
+As of April 2026 the spec has three credible commercial adopters:
+
+- Adobe (`adobe/skills`, Apache 2.0, 72 skills across AEM + App Builder plus separate Commerce and Express bundles).
+- Salesforce (TDX 2026 April 14-15 announcements: ADLC skills, open-sourced Agent Script, 30 coding skills, Agentforce Vibes skill directory at `.a4drules/skills/`).
+- Vercel (referenced by Adobe's README as a peer ecosystem).
+
+Adobe's Commerce skill installer explicitly targets 9 agent directories including Cursor, Windsurf, Gemini CLI, Codex, Antigravity, Cline, Kilo Code, Claude Code, and Copilot. HubSpot took the opposite bet (proprietary Breeze Studio). Optimizely has no public signal.
+
+MCP was donated to the Linux Foundation's Agentic AI Foundation on 2025-12-09, alongside AGENTS.md. The standards landscape (MCP, A2A, NLWeb, AGENTS.md, Agent Skills) is consolidating faster than most enterprise buyers track.
+
+### Pattern 6: vendor catalogues and open catalogues are solving different jobs
+
+Walked Adobe's 72 SKILL.md files. Zero are marketer-facing. The entire catalog is developer / ops tooling for AEM (dispatcher, workflow, replication, authoring, migration). The marketing story inside Adobe runs through Agent Orchestrator inside AEP (Audience Agent, Journey Agent, CJA Data Insights Agent: deployable today per Merkle's March 2026 pre-Summit analysis).
+
+Independent authors in the same ecosystem are solving the marketer-facing skills gap directly: customer-research, copy-editing, social-content, CRO flavours, psychology with ethical gates, dashboards as runnable code. The two tracks are complementary, not competitive. Adobe's Agent Orchestrator plus open-ecosystem skills covers more ground than either alone.
+
+### Pattern 7: regulatory grounding is what separates "safe pilot" from "worth auditing"
+
+Four regulatory sources consistently surface criteria that the implicit "reasonable enterprise" frame misses: EU AI Act Article 14 (human oversight designation), Article 50 (end-user AI disclosure, effective August 2026), OSFI B-10 (third-party subprocessor disclosure, exit strategies), PCI-DSS 4.0 (Req 6.3 prompt-injection defence, Req 10 automated-system logging). Gartner's 2026 AI Governance Platforms guide and Forrester's AEGIS framework both require a named AI inventory as a precondition to deployment.
+
+Lesson for future curation: when a skill claims to be "enterprise-ready," check whether it satisfies the named-approval-point, end-user-disclosure-hook, and per-run-log-line requirements. These are usually the three gates where open-source skills fail quietly.
+
+### Open question: does the practitioner-sourced rubric converge with the regulatory-grounded screen?
+
+This pass produced two independent evaluation instruments: a 7-axis rubric harvested from Haines, Fishkin, Dunford, Osiu, Moesta, Flanagan (evidence over assertion, customer-language fidelity, positioning-context prerequisite, workflow specificity, outcome tie-in, struggle-trigger anchor, humility and safe failure), and a 10-point enterprise screen grounded in OSFI / PCI / EU AI Act / NIST sources. The two were not jointly applied to the same skills in this pass.
+
+Hypothesis worth testing in the next round: a skill that scores high on the practitioner rubric (humility, workflow specificity, outcome tie-in) should correlate with high enterprise-screen pass rates (human approval, eval harness, draft-only first run). If they diverge, the divergence itself is the finding: practitioners care about slightly different things than regulators, and the rubric needs a bridge axis. Worth a small controlled test on 6-8 skills where both scores are already inferrable.
+
+---
+
 ## 2026-04-17
 
 ### Adversarial audit pass: what looked like fabrication was usually drift or author voice
