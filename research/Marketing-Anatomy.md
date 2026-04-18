@@ -331,14 +331,6 @@ What is deliberately deferred to follow-up rounds:
 
 ---
 
-### v1.1 - Size Spectrum & Sourcing
-
-- Added 3-tier size framing (Solo / SMB / Enterprise) so the doc is useful from solo operator to global brand, with mid-market precision absorbed into the Universality % slider (Section 2.9).
-- Added a **Size Fit** column across every row of the scored inventory, using ● essential / ◐ helpful / - skip notation (Section 3).
-- Added the awareness → affinity → trust → transaction framing so the skeleton has a human-level anchor, not just an IT-architect anchor (Section 2).
-- Added the **Sourcing Cheat Sheet** per tier so a reader can locate themselves and know whether to DIY, augment, or buy (Section 3.10).
-- Split vendor listings out into a companion document ([Marketing-Vendors-By-Category.md](Marketing-Vendors-By-Category.md)) so the Anatomy stays clean and the vendor list can grow independently.
-
----
+*See [CHANGELOG.md](../CHANGELOG.md) for version history.*
 
 *This Anatomy is a living document. The scores are estimates to be challenged, the verbs are a frame to be edited, and the commandments are principles to be tested. What it is not is a blank page - and that is the entire point.*

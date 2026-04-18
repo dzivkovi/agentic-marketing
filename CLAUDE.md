@@ -58,6 +58,21 @@ Each table is organized under one of the 8 verbs. Every vendor row must include:
 
 The README contains a personal origin story ("From Fishing to Marketing") that grounds the project. This personal narrative is intentionally separate from the industry-universal Anatomy. Do not merge personal anecdotes into the Anatomy, and do not strip the personal voice from the README.
 
+## Release Process
+
+Three media, three distinct roles. Do not duplicate release notes into the Anatomy or other content docs.
+
+- `CHANGELOG.md` (root) - reader-facing release trail. Narrative bullets per version.
+- Git tag annotations - terse VCS pointers. The tag name is the version; do not repeat the `vX.Y` prefix in the message body.
+- `CURATION-LOG.md` (root) - editorial journal (why a skill was added, what gap it filled). Not release notes.
+
+When cutting a release:
+
+1. Add a new section at the top of `CHANGELOG.md` titled `## vX.Y - <short descriptive title>`. Bullet the high-level changes.
+2. If editorial learning drove any of the changes, cross-reference the dated `CURATION-LOG.md` entries from a CHANGELOG bullet.
+3. Create an annotated git tag: `git tag -a vX.Y -m "<short descriptive title>"`.
+4. Push the tag: `git push origin vX.Y`.
+
 ## Reminder
 
 The rules in `specs/agent-rules.md` apply to every task in this repo without exception. When in doubt, re-read them. If a rule here in `CLAUDE.md` conflicts with `specs/agent-rules.md`, `CLAUDE.md` wins because it is project-specific (this override is stated at the top of `specs/agent-rules.md`).
