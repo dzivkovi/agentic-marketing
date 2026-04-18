@@ -2,6 +2,16 @@
 
 All notable changes to this project are recorded here. Tag annotations remain minimal; narrative detail lives in this file. For editorial reasoning behind individual additions, see [CURATION-LOG.md](CURATION-LOG.md).
 
+## v1.2 - Audit-driven content pass
+
+Parallel adversarial audits of the v1.1 content surfaced star-count drift, author-voice-vs-curator-voice leakage, unverified Gartner claims, and overlapping revision-tracking mechanisms. This release hardens all three.
+
+- **Revision tracking consolidated.** `CHANGELOG.md` now owns the release trail, tag annotations stay terse, [CURATION-LOG.md](CURATION-LOG.md) keeps its editorial-journal role. Release Process codified in `CLAUDE.md`.
+- **Awesome list hardened.** Star counts refreshed via the GitHub API; repo-root links converted to deep links for `realjaymes`, `ericosiu`, and `pawbytes`; URL moves applied (`BrianRWagner/ai-marketing-claude-code-skills`, `a2aproject/A2A`); puffery quoted-and-attributed or neutralized; unverifiable "Linux Foundation MCP" and `gnoviawan` provenance notes dropped.
+- **Vendor companion corrected.** Heap flagged as Contentsquare-acquired (Dec 2023); Dynamic Yield "400+" softened to "~300 per vendor's own pages"; WordPress 43%-of-sites and ~60%-CMS-share figures separated; Contentstack and Sitecore Gartner claims removed as unverifiable; enterprise size-fit bumped to E:● for vendors with explicit enterprise tiers (WordPress VIP, Shopify Plus, Canva Enterprise, HubSpot Enterprise); new Stack Notes and Out of Scope sections call out Adobe/Salesforce integration and intentional omissions.
+
+Editorial context: see the 2026-04-17 entries in [CURATION-LOG.md](CURATION-LOG.md).
+
 ## v1.1 - Curation log, verb visibility, SENSE expansion
 
 - Surface the 8 marketing verbs directly in README so readers see the framework without clicking through to the Anatomy.
