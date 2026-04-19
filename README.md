@@ -4,28 +4,6 @@ An open-source framework for understanding what marketing actually is, where AI 
 
 ---
 
-## From Fishing to Marketing
-
-Around 2005, my wife became a real estate agent and I became her marketing department. At the time, I was an avid fisherman - and I quickly realized I was solving the same problem in both pursuits: **"What do they bite on?"**
-
-Different bait for different species; different messages for different audiences. You can't force a bite; you present the right thing at the right time and wait. I didn't know any of this had names or frameworks. I just knew that SEO, content, email campaigns, and analytics felt like fishing with better tools.
-
-My first real lesson came from targeting. I advertised my wife as a "Greater Toronto Area" real estate agent - five million people, zero leads. When I sharpened the hook to "Richmond Hill Real Estate" and "North York Condos," the leads started flowing. She ended up selling outside those areas anyway. In fishing terms: sharper the hook, better the catch. In marketing terms: specificity beats reach. I've watched enterprise brands make the same mistake at a different scale.
-
-When I earned my **Inbound Marketing University** certification in 2009 (signed by Brian Halligan, HubSpot's CEO), it was the first time I realized the patterns I'd discovered empirically had an entire industry behind them.
-
-![HubSpot Inbound Marketing Certificate](<images/IMU-Certificate.jpg>)
-
-Then the enterprise world pulled me in. At **HOOPP** (Healthcare of Ontario Pension Plan), I spent four and a half years building their marketing technology stack: CMS vendor selection, website redesign with deliberate SEO ranking preservation, CRM and email marketing platform evaluation. The director of marketing taught me a lesson I carry to every engagement: *"Daniel, show me what you have and I'll tell you what I want."* Marketers don't hand you requirements from a blank page - they need a catalyst, a draft, a prototype to react to. That principle became Commandment #2 in this project's framework.
-
-At **Tangerine Bank**, after their independence from ING, I helped unify two disparate web properties (the main banking site and their blog site) into a single platform with lead scoring and audience segmentation built in from day one. A colleague from that engagement later described the value I brought as *"an uncanny ability to translate business needs, shield us from the complexity of the back end, and work to provide solutions that benefit all stakeholders"* - the bridge between marketing and IT that most organizations struggle to build.
-
-![Fishing - where it all started](<images/fishing.jpg>)
-
-I was never the closer. I built the pipeline - the system that found the right people and got them to the table. Two decades later, that's exactly what I'm doing at enterprise scale: decomposing marketing into [8 operating verbs](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs), scoring 40+ activities by how much AI can help, and mapping the skills that make agentic marketing real - from solo operator to global enterprise.
-
----
-
 ## What's Inside
 
 Three things, each usable on its own:
