@@ -26,12 +26,15 @@ I was never the closer. I built the pipeline - the system that found the right p
 
 ---
 
-## What This Project Is
+## What's Inside
 
-This is my personal Anatomy of marketing AI architecture - and I'm keeping it open source. The goal is twofold:
+Three things, each usable on its own:
 
-1. **If you're figuring out marketing AI on your own**, this gives you the map: what every marketer does (8 marketing verbs), which activities AI can help with today, and whether you should DIY, hire, or buy at your size.
-2. **If you're considering working with me**, this shows you how I think about the problem before we ever meet - so our first conversation starts with substance, not a blank page.
+1. **The Marketing Anatomy** - a framework that decomposes marketing into [7 commandments and 8 verbs](research/Marketing-Anatomy.md), scores 40+ activities by how much AI can help today, and maps each activity to a size tier (solo, SMB, enterprise). Start here if you need the map.
+2. **The Awesome List** - a [curated index of open-source agent skills, tools, and resources](AWESOME-MARKETING-SKILLS.md) organised by the same 8 verbs. Every entry is hand-verified, not auto-generated. Start here if you want tools you can use today.
+3. **The Tool Review Procedure** - a [reproducible methodology](specs/tool-review.md) to vet any marketing AI tool against the framework and produce a structured verdict in 20-40 minutes. Start here when a new vendor claims to have solved something and you want to cut through the noise.
+
+Looking for the author's background, influences, and two-decade path from real estate marketing to enterprise AI? See [ABOUT.md](ABOUT.md).
 
 ---
 
