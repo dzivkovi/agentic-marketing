@@ -66,6 +66,32 @@ These eight activities recur across most marketing organizations, from solo oper
 
 ---
 
+## The Tool Review Procedure
+
+Every week a new marketing AI tool claims to solve something. Most are noise, a few are real - and distinguishing them takes hours of research that every buyer redoes independently. This repo contains a **reproducible methodology** to evaluate any tool against the 8-verb Anatomy and produce a structured verdict in 20-40 minutes.
+
+**What it produces:**
+
+- **3-state verdict** - `Wrapper` (public API, skill-wrappable in a day), `Hybrid` (API + real orchestration needed), or `Hard` (proprietary moat, scraping-only, or enterprise-gated).
+- **Persona-relative skill-gap** - `No gap` / `Partial` / `Yes`, evaluated per named audience. The same tool can be a no-gap for a GTM engineer and a partial-gap for a solo broker; the procedure forces you to name who you're evaluating for.
+- **Verb fit** - which of the 8 Anatomy verbs the tool primarily serves, with secondary verbs where the output enables downstream work.
+- **Vendor-official runtime check** - does the vendor already ship an MCP, CLI, or Agent Skill? If yes, the "should we wrap this ourselves?" question often collapses before it's asked.
+
+**Two artifacts, one methodology:**
+
+| Path | Role |
+| --- | --- |
+| [`specs/tool-review.md`](specs/tool-review.md) | The **procedure** - a 5-leg methodology (internal grep → docs → wrapper search → alternatives → verdict). Read this to understand or run the method manually. |
+| [`.claude/commands/review-tool.md`](.claude/commands/review-tool.md) | The **slash command** - type `/review-tool <tool-name>` in Claude Code to invoke the procedure automatically and persist the output. |
+
+Recipe (spec) vs. microwave button (command). The procedure is the canonical method; the command is the keyboard shortcut.
+
+**Example:** a fresh review of ScrapeCreators (a multi-platform scraping API for 27+ social and search platforms) classified it as **Wrapper** with **No gap across four personas** - because the vendor already ships a hosted MCP, an official CLI, and an official Agent Skill. The full output lives at [`research/tool-reviews/scrapecreators.md`](research/tool-reviews/scrapecreators.md).
+
+**Why this is in the repo:** the Anatomy tells you *what* to look for in a marketing tool; the procedure tells you *how* to look systematically. Together they let any reader - solo marketer, GTM engineer, or enterprise architect - independently vet a vendor and produce a verdict that's comparable to anyone else's. No more vendor-by-vendor guesswork.
+
+---
+
 ## Where This Is Going
 
 The framework maps the territory. The next step is **building the tools to work it.**
