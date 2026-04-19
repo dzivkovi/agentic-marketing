@@ -23,6 +23,7 @@
 | Meltwater | Media monitoring, PR analytics | S:— SMB:◐ E:● | No - proprietary media database | Strongest for earned media / PR tracking |
 | X (Twitter) | Real-time trending topics, hashtag monitoring, public conversation | S:● SMB:● E:● | Partially - free to browse; AI can scrape, but X's firehose API is the enterprise play | Real-time public conversation at volume; every marketer should be watching it |
 | Reddit | Community signals, niche sentiment, product feedback | S:● SMB:● E:◐ | Partially - free to browse; subreddit monitoring is AI-friendly | Increasingly important for authentic voice-of-customer signals |
+| ScrapeCreators | Multi-platform scraping API (27+ platforms, 110+ endpoints — TikTok, IG, YT, LinkedIn, FB, X, Reddit, Threads, Bluesky, Pinterest, Snapchat, Twitch, Google SERPs, Amazon Shop, plus FB/Google/LinkedIn ad libraries) | S:● SMB:● E:◐ | No - the moat is keeping 27+ platforms un-blocked; but consumption is agent-native (vendor ships MCP + CLI + official SKILL.md) | Pay-as-you-go: Free 100 / $47 Freelance (25k credits) / $497 Business (500k) / custom Enterprise. No rate limits. Credits never expire. Hosted MCP at `api.scrapecreators.com/mcp`, CLI `@scrapecreators/cli`, Agent Skill at `ScrapeCreators/agent-skills`. Full review: [tool-reviews/scrapecreators.md](tool-reviews/scrapecreators.md) |
 
 ## KNOW: Build and maintain audience intelligence
 
