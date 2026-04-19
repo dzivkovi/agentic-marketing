@@ -1,8 +1,8 @@
 # Tool Review Procedure
 
-**Version:** 0.2 (2026-04-19)
-**Status:** Revised after round 1 validation against 3 tools of varying difficulty (Firecrawl/easy, Clay/medium, HubSpot/hard). Three independent validation agents converged on the same gaps; this version addresses them.
-**Prior version:** v0.1 (see git history — 2026-04-19 earlier commit)
+**Version:** 0.3 (2026-04-19)
+**Status:** Revised after the 2026-04-19 Profound review self-corrected an overstated "category absent" claim. Adds the **category-coverage matrix** to Leg 1 and **per-verb gap reporting** to Leg 5. Multi-verb category coverage was the remaining blind spot in v0.2.
+**Prior versions:** v0.2 (vendor-official runtime substep, persona lens, multi-surface structure, thin-skin/thick-core modifier, name-collision check, tool-call budget, routing heuristics, stub detection, searches-run audit). v0.1 (initial derivation from the ScrapeCreators case).
 
 ## Purpose
 
@@ -34,7 +34,19 @@ Before touching the web, grep the repo for prior research:
 - Check whether the tool name collides with other products (e.g., `clay.com` GTM platform vs. `clay.earth` personal CRM; `Notion` productivity vs. various unrelated products)
 - Identify the authoritative GitHub org/owner — a namespace mismatch is a red flag
 
-**Why first:** avoids duplicating past work, front-loads disambiguation before web cycles are burned on the wrong entity.
+**New in v0.3: category-coverage matrix.** For any tool in an emerging or multi-verb category, build a matrix before declaring "coverage" or "gap." A single grep-hit on one verb does not absolve gaps on others.
+
+| Verb (applicable) | Anatomy row? | Vendor Companion row? | AWESOME entry? |
+|---|---|---|---|
+| _(one row per verb the tool plausibly touches)_ | Y / N / Partial | Y / N | Y / N |
+
+Fill each cell; report every `N` and `Partial` cell explicitly in Leg 5 synthesis.
+
+**Why (v0.3 driving case):** the 2026-04-19 Profound review initially declared "GEO/AEO category absent from Anatomy." A SHIP-verb row (`SEO / GEO content strategy`) did exist, but MEASURE (AI-visibility tracking) and SENSE (prompt-demand sensing) were genuinely gapped. A single-verb grep produced the overstatement; the matrix makes per-verb coverage explicit. Multi-verb categories (GEO, agentic ops, CDP, attribution) are exactly where this check pays off.
+
+**When to skip the matrix:** single-verb tools with obvious fit (e.g., an email-send API is SHIP-only). When in doubt, build the matrix; it costs a few extra greps and prevents a wrong public verdict.
+
+**Why first:** avoids duplicating past work, front-loads disambiguation and per-verb coverage gaps before web cycles are burned on the wrong entity.
 
 ### Leg 2 — Tool docs [MANDATORY]
 
@@ -124,6 +136,7 @@ Do not force a single-primary-verb for tools like HubSpot that span all 8 verbs.
 **Meta-observations (free text):**
 - What was surprising
 - What's missing in this repo (Vendor Companion row? awesome-list entry? Curation Log note?)
+- **Per-verb coverage gaps (new in v0.3):** if the Leg 1 matrix flagged any `N` or `Partial` cell, name each gap explicitly, by verb. Do not write "category absent" when only one verb is gapped; do not write "category present" when only one verb is covered.
 - What a skill would have to add beyond the API (the *orchestration intelligence* layer)
 - **Searches run** (explicit bullet list, so "no wrapper" is verifiable)
 
@@ -200,9 +213,13 @@ Per `specs/agent-rules.md` and CLAUDE.md Confidentiality Guardrail:
 
 - **v0.1** (2026-04-19 earlier) — derived from ScrapeCreators case only
 - **v0.2** (2026-04-19) — after round-1 validation on Firecrawl/Clay/HubSpot. Added: vendor-official runtime substep, persona lens, multi-surface vendor structure, thin-skin/thick-core modifier, name-collision check, tool-call budget, routing heuristics, stub detection, searches-run audit
+- **v0.3** (2026-04-19, later) — after the Profound review self-corrected an overstated category-gap claim. Added: **category-coverage matrix** in Leg 1 (per-verb Anatomy / Vendor Companion / AWESOME check before declaring coverage), **per-verb coverage gap reporting** in Leg 5 meta-observations. Driving lesson: multi-verb categories (GEO, agentic ops, CDP) were still slipping through single-verb greps in v0.2. See CURATION-LOG 2026-04-19 `Procedure v0.3` entry.
 
-## Known limitations of v0.2
+## Known limitations of v0.3
 
-- Still small sample (3 validation cases + 1 original)
+- Still modest sample (4 validation cases + Profound driving v0.3)
 - No guidance for pricing extraction when vendor hides pricing behind sales calls
-- Round 2 should test whether these additions actually improve outputs on the same tools
+- Category-coverage matrix depends on reviewer judgment for "which verbs are applicable"; easy to under-apply on a novel category
+- No automated help for scoring new Anatomy rows (still requires user sign-off per CLAUDE.md)
+- Does not address truly novel categories (no existing verbs fit). For those, the reviewer must propose a new verb or sub-activity rather than forcing the fit
+- Round 2 should validate whether v0.3's matrix addition prevents regressions on the previously-validated tools

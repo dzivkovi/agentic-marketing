@@ -100,6 +100,7 @@ The scores are my informed estimates, not measurements. Challenge them; they're 
 | Competitive intelligence | Deep Research & Competitor Analyst | 95 | 75 | 71 | T1 | S:◐ SMB:● E:● | Kieran + Research Agent pattern | Needs authoritative source allowlist to avoid pollution |
 | Voice of Customer capture (surveys, tickets) | Voice of Customer Flywheel | 85 | 70 | 60 | T1 | S:● SMB:● E:● | Rick Mulready | Even a solo operator needs to listen; data in Qualtrics/Zendesk/Salesforce — MCP connector targets |
 | Analyst & media coverage tracking | — | 70 | 65 | 46 | T2 | S:— SMB:◐ E:● | my addition | Distinct B2B workflow; solo rarely needs this |
+| Prompt-demand sensing (GEO) | Prompt-Demand Sensor | 30 | 75 | 23 | T3 | S:— SMB:◐ E:● | my addition 2026-04-19 | What millions ask AI chat engines; parallel to keyword research but for generative engines. Vendor data-moats (e.g., Profound Prompt Volumes) dominate; high consumption leverage, low DIY viability. See also MEASURE row `AI-visibility tracking (GEO)` and SHIP row `SEO / GEO content strategy` |
 
 ### 3.2 KNOW
 
@@ -139,7 +140,7 @@ The scores are my informed estimates, not measurements. Challenge them; they're 
 | Campaign launch asset bundling | Campaign Launch Orchestrator | 85 | 85 | 72 | T1 | S:— SMB:● E:● | Rick Mulready + Brief Creation pattern | Solo just publishes; SMB+ needs bundled orchestration |
 | Localization & regional adaptation | Regional Content Localization | 80 | 80 | 64 | T1 | S:— SMB:◐ E:● | my addition | Only if selling across regions; near-100% for global brands |
 | Customer advocacy / case study generation | — | 85 | 70 | 60 | T1 | S:● SMB:● E:● | my addition | Testimonials matter at every size; AI cuts time 70%+ |
-| SEO / GEO content strategy | Proactive SEO & GEO Strategy | 85 | 70 | 60 | T1 | S:● SMB:● E:● | enterprise additions | GEO (generative engine optimization) is the 2026 frontier; solo needs SEO too |
+| SEO / GEO content strategy | Proactive SEO & GEO Strategy | 85 | 70 | 60 | T1 | S:● SMB:● E:● | enterprise additions | GEO content is the SHIP-side of a multi-verb category: pairs with SENSE row `Prompt-demand sensing (GEO)` and MEASURE row `AI-visibility tracking (GEO)`. Solo needs SEO; GEO at Solo often capped by enterprise-priced vendor tooling |
 | Cross-channel alignment audit | Cross-Channel Alignment Auditor | 75 | 70 | 53 | T2 | S:— SMB:◐ E:● | Rick Mulready | Solo has 1–2 channels; weekly marketing ops task at scale |
 | Lifecycle / journey orchestration (CRM) | Intelligent Lead Scoring & Journey Orchestration | 90 | 60 | 54 | T2 | S:— SMB:● E:● | enterprise additions | Solo does manual follow-ups; lives in Salesforce/HubSpot/Marketo — MCP target |
 | Predictive churn & retention | Predictive Churn & Retention Agents | 75 | 65 | 49 | T2 | S:— SMB:◐ E:● | enterprise additions | Needs data volume; mix of classical ML and agentic triggering |
@@ -160,6 +161,7 @@ The scores are my informed estimates, not measurements. Challenge them; they're 
 | Activity | Candidate Agent | Univ % | AI % | Score | Tier | Size Fit | Source | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Performance dashboarding | Data Analysis & Dashboarding Agent | 100 | 60 | 60 | T1 | S:● SMB:● E:● | Grace Leung | Even solo needs to check analytics; quick win at every size |
+| AI-visibility tracking (GEO) | AI-Visibility Monitor | 40 | 80 | 32 | T3 | S:— SMB:◐ E:● | my addition 2026-04-19 | Share-of-voice in ChatGPT/Perplexity/AI Overviews/Gemini/Claude answers; citation + sentiment over time; AI-crawler log analytics. Gartner predicts 25% traditional-search drop in 2026. Vendor-first-party runtimes (e.g., Profound MCP + SDKs) dominate consumption; Enterprise paid-floor gates Solo. See also SENSE row `Prompt-demand sensing (GEO)` and SHIP row `SEO / GEO content strategy` |
 | Attribution modeling (MTA, MMM, incrementality) | — | 95 | 25 | 24 | T4 | S:— SMB:— E:● | my addition | Purely enterprise-scale data engineering; AI surfaces, doesn't solve |
 | MarTech stack ops / tag management / data plumbing | — | 100 | 25 | 25 | T4 | S:— SMB:◐ E:● | my addition | Solo has nothing to plumb; the plumbing no one wants to do. Patient. |
 

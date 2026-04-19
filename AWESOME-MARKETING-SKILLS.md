@@ -136,6 +136,18 @@ SEO spans SENSE (keyword research), DECIDE (content strategy), MAKE (content cre
 
 ---
 
+## AI Visibility (GEO) — cross-cutting
+
+GEO (Generative Engine Optimization; some vendors call it AEO = Answer Engine Optimization) spans SENSE (prompt-demand data), MEASURE (AI-visibility tracking + AI-crawler analytics), and SHIP (content optimization for AI answer engines). Measuring and shaping brand presence inside ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude.
+
+| Skill / Tool | Source | What it does |
+| --- | --- | --- |
+| [Profound MCP](https://docs.tryprofound.com/agent-apis/mcp/overview) | Profound (vendor-official, launched 2026-03-31) | Hosted MCP at `mcp.tryprofound.com`, local MCP (`npx profound-mcp`), Python SDK (`pip install profound`), TypeScript SDK (`bun install profoundai`). Visibility reports, citation tracking, sentiment, bot/agent analytics, docs search. API access is Enterprise-tier. Full review: [work/tool-reviews/profound.md](work/tool-reviews/profound.md) |
+
+*Terminology note: house term is GEO. Profound and HubSpot use AEO for their own products; those usages are preserved in vendor-specific notes and not rewritten.*
+
+---
+
 ## Standards & Protocols
 
 The infrastructure layer that makes marketing skills portable and connectable.

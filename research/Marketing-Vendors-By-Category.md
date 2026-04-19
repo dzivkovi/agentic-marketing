@@ -24,6 +24,7 @@
 | X (Twitter) | Real-time trending topics, hashtag monitoring, public conversation | S:● SMB:● E:● | Partially - free to browse; AI can scrape, but X's firehose API is the enterprise play | Real-time public conversation at volume; every marketer should be watching it |
 | Reddit | Community signals, niche sentiment, product feedback | S:● SMB:● E:◐ | Partially - free to browse; subreddit monitoring is AI-friendly | Increasingly important for authentic voice-of-customer signals |
 | ScrapeCreators | Multi-platform scraping API (27+ platforms, 110+ endpoints — TikTok, IG, YT, LinkedIn, FB, X, Reddit, Threads, Bluesky, Pinterest, Snapchat, Twitch, Google SERPs, Amazon Shop, plus FB/Google/LinkedIn ad libraries) | S:● SMB:● E:◐ | No - the moat is keeping 27+ platforms un-blocked; but consumption is agent-native (vendor ships MCP + CLI + official SKILL.md) | Pay-as-you-go: Free 100 / $47 Freelance (25k credits) / $497 Business (500k) / custom Enterprise. No rate limits. Credits never expire. Hosted MCP at `api.scrapecreators.com/mcp`, CLI `@scrapecreators/cli`, Agent Skill at `ScrapeCreators/agent-skills`. Full review: [tool-reviews/scrapecreators.md](tool-reviews/scrapecreators.md) |
+| Profound (Prompt Volumes) | Demand-side GEO intelligence: what millions ask AI chat engines, aggregated across ChatGPT / Perplexity / AI Overviews / Gemini / Claude | S:— SMB:◐ E:● | No - proprietary dataset, vendor moat; Enterprise-tier only | Companion dataset to Profound's Answer Engine Insights. Vendor calls the category AEO (Answer Engine Optimization); house term is GEO. Full review: [tool-reviews/profound.md](tool-reviews/profound.md) |
 
 ## KNOW: Build and maintain audience intelligence
 
@@ -120,6 +121,7 @@
 | Meta Business Suite | Facebook + Instagram ad performance, audience insights, organic metrics | S:● SMB:● E:● | N/A - free with any Meta business account | If you run Meta Ads, this is where you measure them |
 | LinkedIn Campaign Manager | B2B ad performance, lead gen metrics, demographic breakdown | S:◐ SMB:● E:● | N/A - free with any LinkedIn ad account | The only place to measure LinkedIn Ads performance |
 | Google Search Console | Organic search performance, indexing, SEO health | S:● SMB:● E:● | N/A - already free | Pairs with GA4; essential for any SEO work |
+| Profound | AI-visibility tracking across ChatGPT / Perplexity / AI Overviews / Gemini / Claude; citation + sentiment reports; AI-crawler (agent) analytics with CDN log ingestion | S:— SMB:◐ E:● | No - proprietary consumer-browser capture across 10+ engines; vendor-first-party MCP + SDKs dominate the consumption surface | Starter $99/mo (ChatGPT only); Growth $399/mo (multi-engine); API + MCP Enterprise-tier only. Hosted MCP at `mcp.tryprofound.com`, plus Python + TypeScript SDKs (launched 2026-03-31). Series C $96M at $1B valuation (Feb 2026). Vendor calls the category AEO (Answer Engine Optimization); house term is GEO. Full review: [tool-reviews/profound.md](tool-reviews/profound.md) |
 
 ## LEARN: Close the loop, update the playbook
 

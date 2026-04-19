@@ -10,6 +10,27 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ## 2026-04-19
 
+### Terminology decision: GEO adopted as house term over AEO
+
+2026-04 market signal: "GEO" is dominant across SEO influencers (~59% reference per industry surveys), Andreessen Horowitz's May 2025 thesis, Search Engine Land, Frase, academic literature (Aggarwal 2023 GEO paper), and Wikipedia. "AEO" is favored by platform vendors: Profound published [`AEO vs GEO: why we prefer AEO`](https://www.tryprofound.com/blog/aeo-vs-geo); HubSpot shipped "AEO" features into its platform. "AIO" is ambiguous (AI Optimization generic, or Google's AI Overviews feature) and dropped as a confusion hazard. House decision: **GEO as the house taxonomy term**, AEO acknowledged as vendor-preferred and preserved in vendor-specific notes (Profound's own "AEO" self-description is not rewritten). Aligns with majority market usage and the pronunciation preference of the maintainer.
+
+### GEO formalized as a multi-verb category in the Anatomy
+
+A fresh Anatomy grep surfaced the gap: GEO had a SHIP-verb row (`SEO / GEO content strategy`, T1 at 60, notes: "2026 frontier") for content optimization, but no MEASURE or SENSE representation. Two new scored rows added in this release:
+
+- **SENSE / Prompt-demand sensing (GEO)** — U:30 x L:75 = 23 (T3 Transformation). Agent: "Prompt-Demand Sensor". Size fit S:— SMB:◐ E:●. Emerging but growing; vendor data-moats (Profound Prompt Volumes) dominate; high consumption leverage, low DIY.
+- **MEASURE / AI-visibility tracking (GEO)** — U:40 x L:80 = 32 (T3 Transformation). Agent: "AI-Visibility Monitor". Size fit S:— SMB:◐ E:●. Gartner predicts 25% traditional-search drop in 2026; vendor-first-party runtimes (Profound MCP + SDKs) dominate consumption; Enterprise paid-floor gates Solo.
+
+The existing SHIP row (`SEO / GEO content strategy`) notes were updated to cross-reference both new rows so readers see the multi-verb picture. Both scores are conservative starters; revisit as the category matures.
+
+### Procedure v0.3: category-coverage matrix after Profound self-correction
+
+The 2026-04-19 Profound review initially wrote "AEO/GEO as a category is absent from this repo's Anatomy, Vendor Companion, and AWESOME list." The maintainer pushed back. A re-grep showed the SHIP-verb row `SEO / GEO content strategy` did cover the content-optimization side; MEASURE and SENSE were the actual gaps. Procedure bumped to v0.3: Leg 1 now requires a **category-coverage matrix** across applicable verbs (not a single-verb grep) and Leg 5 requires per-verb gap reporting. Lesson: multi-verb categories (GEO, agentic ops, CDP, attribution) slip through single-verb greps; the matrix forces per-verb coverage to be explicit before synthesis hardens a wrong claim. See [`specs/tool-review.md`](specs/tool-review.md) v0.3 diff.
+
+### Pattern: pricing-floor-as-persona-gate
+
+Profound is the first vendor reviewed where the *pricing floor* creates a persona-gap larger than the skill-gap. Vendor-official MCP + SDKs are excellent; API access is Enterprise-tier only. Solo and SMB cannot meaningfully consume the runtime regardless of quality. The existing 3-state classification (`Wrapper` / `Hybrid` / `Hard`) does not encode this dimension. Flagged for v0.4 procedure work: whether to promote "paid-floor persona-incompatibility" from an ad-hoc Notes observation to a first-class review dimension. Carries over to sibling vendors in the GEO space (Peec AI, Otterly, Scrunch, Promptwatch) pending their own reviews.
+
 ### ScrapeCreators skill-gap: closed via vendor-official trifecta
 
 The 2026-04-13 entry left open whether ScrapeCreators' paid-API dependency effectively excluded Solo marketers. Fresh procedure-driven research (see [`research/tool-reviews/scrapecreators.md`](research/tool-reviews/scrapecreators.md)) answers the question three times over: the vendor ships a **hosted MCP** at `api.scrapecreators.com/mcp`, an **official CLI** `@scrapecreators/cli` on npm (with `scrapecreators agent add {cursor,claude,codex}` auto-config), and an **official Agent Skill** at `github.com/ScrapeCreators/agent-skills` — a 16 KB SKILL.md teaching endpoint routing, pagination, credit awareness, and platform quirks (no-`@`, no-`#`, FB 3-per-page, Threads 20-30 cap). Pricing: Free 100 credits → $47 Freelance (25k credits) → $497 Business (500k) → custom Enterprise. Credits never expire. No rate limits. For the Solo-tier question specifically: the **$47 Freelance tier** is the lowest-viable working spend and covers months of ordinary cross-channel monitoring. Gap is real but narrow; vendor tiering closes it at a price even solo consultants can amortize. Vendor Companion row now added under SENSE at **S:● SMB:● E:◐**.

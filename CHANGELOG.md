@@ -2,6 +2,30 @@
 
 All notable changes to this project are recorded here. Tag annotations remain minimal; narrative detail lives in this file. For editorial reasoning behind individual additions, see [CURATION-LOG.md](CURATION-LOG.md).
 
+## v2.1 - GEO category formalized across MEASURE + SENSE + SHIP
+
+AI-answer-engine visibility is becoming the new search visibility. When a prospect asks ChatGPT, Perplexity, or Google AI Overviews "what's the best X for Y?", being cited in the answer is rapidly becoming as consequential as ranking first on Google was a decade ago. Gartner is calling for a 25% drop in traditional-search volume in 2026 alone. Practitioners are reaching for a vocabulary to name the new discipline: GEO (Generative Engine Optimization), sometimes called AEO (Answer Engine Optimization).
+
+Before this release, the Anatomy treated GEO as a content-optimization sub-activity under SHIP. That captured the "write for AI engines" side, but not the "track whether you're cited" (MEASURE) or "know what people are asking AI" (SENSE) sides. Marketing teams doing real GEO work had no named rows to map their work to, and tool reviewers had no structural guard against reporting a category as covered when only one of its verbs was. This release closes both gaps:
+
+- Two new scored activities name the missing sides of GEO.
+- A new Vendor Companion row + AWESOME list subsection give reviewers and readers a place to put AI-visibility tools.
+- The Tool Review Procedure bumps to v0.3 with a category-coverage matrix that forces per-verb coverage checks before synthesis.
+- A terminology house rule is codified: GEO is the taxonomy term; AEO is preserved where vendors use it for their own products.
+
+The first review in the category (Profound) is held private pending sibling-vendor reviews and pricing re-verification.
+
+Details:
+
+- **Anatomy additions.** Two new rows in the scored inventory: SENSE `Prompt-demand sensing (GEO)` (U:30 x L:75 = 23, T3) and MEASURE `AI-visibility tracking (GEO)` (U:40 x L:80 = 32, T3). The existing SHIP row (`SEO / GEO content strategy`, T1 at 60) now cross-references both new rows so readers see the multi-verb picture. Scores are conservative starters; revisit as the category matures.
+- **Tool Review Procedure v0.3.** Adds a **category-coverage matrix** in Leg 1: for tools in an emerging or multi-verb category, the reviewer checks each applicable verb separately (Anatomy / Vendor Companion / AWESOME) and reports per-verb coverage, not a single "category absent/present" claim. Leg 5 synthesis now requires naming any `N` or `Partial` cell explicitly. Driven by the Profound review's initial overstatement ("category absent" when SHIP was covered). See [`specs/tool-review.md`](specs/tool-review.md).
+- **Vendor Companion additions.** Profound rows under MEASURE (primary) and SENSE (secondary, Prompt Volumes dataset). AEO is preserved as the vendor's preferred term in Notes; GEO is used for category-level descriptors.
+- **Awesome list addition.** New cross-cutting subsection `AI Visibility (GEO)` seeded with Profound MCP (vendor-official hosted + local + Python + TypeScript SDKs, launched 2026-03-31).
+- **Terminology house rule.** GEO is the primary house term (matches ~59% dominant usage among SEO influencers, Andreessen Horowitz's May 2025 thesis, Search Engine Land, academic origin). AEO is acknowledged as vendor-preferred (Profound, HubSpot) and preserved in vendor-specific notes; not adopted into the taxonomy.
+- **First GEO-space tool review: Profound.** Held private in [`work/tool-reviews/profound.md`](work/tool-reviews/profound.md) pending sibling-vendor reviews (Peec AI, Promptwatch, Otterly, Scrunch) and pricing re-verification post-Series-C.
+
+Editorial context: see the 2026-04-19 entries in [CURATION-LOG.md](CURATION-LOG.md) titled `Terminology decision: GEO adopted as house term over AEO`, `GEO formalized as a multi-verb category in the Anatomy`, `Procedure v0.3: category-coverage matrix after Profound self-correction`, and `Pattern: pricing-floor-as-persona-gate`.
+
 ## v2.0 - Tool-review methodology and README repositioning
 
 Two threads land in this release. First, a reproducible procedure for assessing marketing AI tools against the 8-verb Anatomy was developed, validated across four vendors, and published with its first public review. Second, the README shifts from origin-story-first to framework-first, surfacing the methodology as the rare asset the repo now offers.
