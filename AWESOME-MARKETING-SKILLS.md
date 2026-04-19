@@ -33,6 +33,7 @@ Skills and tools mapped to the [8 marketing verbs](research/Marketing-Anatomy.md
 | [customer-research](https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research) | Corey Haines | Structured customer research workflows - surveys, interviews, signal extraction |
 | [competitor-alternatives](https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-alternatives) | Corey Haines | Competitive intelligence and positioning against alternatives |
 | [last30days](https://github.com/mvanhorn/last30days-skill) | mvanhorn | Cross-platform trend research - aggregates Reddit, X, YouTube, HN, Polymarket, and 7 more into cited briefs |
+| [ScrapeCreators/agent-skills](https://github.com/ScrapeCreators/agent-skills) | ScrapeCreators (vendor-official) | Official Claude Agent Skill for the ScrapeCreators scraping API - 27+ social/search platforms (TikTok, IG, YT, LinkedIn, X, Reddit, Threads, Bluesky, Pinterest) plus FB/Google/LinkedIn ad libraries. Teaches endpoint routing, pagination, credit awareness, platform quirks. Vendor also ships hosted MCP at `api.scrapecreators.com/mcp` and npm CLI `@scrapecreators/cli` |
 | [Google Trends](https://trends.google.com) | Google (free) | Real-time search interest and trending topics; the simplest SENSE tool |
 | [X / Twitter](https://x.com) | X (free to browse) | Real-time public conversation - trending topics, hashtag monitoring, high-volume signal feed |
 
