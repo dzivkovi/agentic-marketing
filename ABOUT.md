@@ -69,6 +69,8 @@ Two seemingly unconnectable threads - a decade of marketing technology and a dec
 
 In 2026, I began helping a major global payments company introduce agentic AI into their marketing organization. It wasn't a pivot - it was a convergence. Two decades of marketing instinct and enterprise architecture finally had the same address. This framework is what came out of it.
 
+This convergence isn't unique to me - it's the shape of a new role taking form. Product-minded technologists and tech-savvy product managers are becoming **the riders of AI**.
+
 ---
 
 ## The Influences
