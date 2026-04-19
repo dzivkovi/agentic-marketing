@@ -2,6 +2,18 @@
 
 All notable changes to this project are recorded here. Tag annotations remain minimal; narrative detail lives in this file. For editorial reasoning behind individual additions, see [CURATION-LOG.md](CURATION-LOG.md).
 
+## v2.0 - Tool-review methodology and README repositioning
+
+Two threads land in this release. First, a reproducible procedure for assessing marketing AI tools against the 8-verb Anatomy was developed, validated across four vendors, and published with its first public review. Second, the README shifts from origin-story-first to framework-first, surfacing the methodology as the rare asset the repo now offers.
+
+- **Tool Review Procedure (v0.2).** A 5-leg methodology (internal grep → tool docs → wrapper/runtime search → alternatives → verdict) that produces a 3-state classification (`Wrapper` / `Hybrid` / `Hard`), persona-relative skill-gap, verb fit, and vendor-official runtime check. Invocable as `/review-tool <name>` via the slash-command at [`.claude/commands/review-tool.md`](.claude/commands/review-tool.md); full methodology at [`specs/tool-review.md`](specs/tool-review.md).
+- **First public tool review: ScrapeCreators.** Classified **Wrapper** with **No gap across four personas** (marketing consultant, solo creator, GTM engineer, MMM analyst) because the vendor ships a first-class agent trifecta — hosted MCP, official CLI, and Agent Skill. Published at [research/tool-reviews/scrapecreators.md](research/tool-reviews/scrapecreators.md).
+- **Vendor companion and awesome list additions.** SENSE tier now includes ScrapeCreators (multi-platform scraping API, 27+ platforms incl. Meta/Google/LinkedIn ad libraries). The awesome list adds the vendor-authored [ScrapeCreators/agent-skills](https://github.com/ScrapeCreators/agent-skills) next to last30days-skill.
+- **README repositioning.** "What This Project Is" becomes "What's Inside" — a three-asset inventory (Anatomy / Awesome List / Tool Review Procedure) with self-routing entry points. A prominent new section surfaces the Tool Review Procedure and explains the spec-vs-command distinction. The "From Fishing to Marketing" origin story moves entirely to [ABOUT.md](ABOUT.md), where the fuller narrative already lived. Fishing photo and IMU certificate images follow.
+- **Riders of AI.** A two-sentence bridge in ABOUT.md names the hybrid role this framework is meant to serve: product-minded technologists and tech-savvy product managers who learn to direct agents rather than build them.
+
+Editorial context: see the 2026-04-19 entries in [CURATION-LOG.md](CURATION-LOG.md).
+
 ## v1.2 - Audit-driven content pass
 
 Parallel adversarial audits of the v1.1 content surfaced star-count drift, author-voice-vs-curator-voice leakage, unverified Gartner claims, and overlapping revision-tracking mechanisms. This release hardens all three.
