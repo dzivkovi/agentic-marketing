@@ -16,6 +16,8 @@ The thing nobody tells you about fishing is that it's mostly problem-solving: re
 
 The question that drives every fishing trip is the same one that drives every marketing campaign: **"What do they bite on?"**
 
+![Fishing - where it all started](<images/fishing.jpg>)
+
 ### Real Estate Marketing (2005-2015)
 
 Around 2005, my wife Jasmina became a real estate agent in Toronto. I became her marketing department: SEO, content, email campaigns, SMS, and open houses. I even got my real estate license so I could work the open houses legally and engage with prospects directly.
@@ -27,6 +29,8 @@ My second lesson was about patience. In fishing, if you pull the line too fast, 
 I was never the closer. Jasmina is patient, nurturing, an introvert who builds deep trust. I'm loud, fast, extroverted - good at attracting attention, not great at sitting with it. So I built the system: the SEO that got her found on Google, the email sequences that kept leads warm, open house signs with IVR and SMS response codes that captured leads before they walked through the door, and the analytics that told us what was working. She closed the deals.
 
 When I earned my **Inbound Marketing University** certification in 2009 (signed by Brian Halligan, HubSpot's CEO), it was the first time I realized the patterns I'd discovered through fishing and real estate had an entire industry behind them.
+
+![HubSpot Inbound Marketing Certificate](<images/IMU-Certificate.jpg>)
 
 ### The Hidden Marketer
 
