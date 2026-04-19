@@ -8,6 +8,22 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ---
 
+## 2026-04-19
+
+### ScrapeCreators skill-gap: closed via vendor-official trifecta
+
+The 2026-04-13 entry left open whether ScrapeCreators' paid-API dependency effectively excluded Solo marketers. Fresh procedure-driven research (see [`research/tool-reviews/scrapecreators.md`](research/tool-reviews/scrapecreators.md)) answers the question three times over: the vendor ships a **hosted MCP** at `api.scrapecreators.com/mcp`, an **official CLI** `@scrapecreators/cli` on npm (with `scrapecreators agent add {cursor,claude,codex}` auto-config), and an **official Agent Skill** at `github.com/ScrapeCreators/agent-skills` — a 16 KB SKILL.md teaching endpoint routing, pagination, credit awareness, and platform quirks (no-`@`, no-`#`, FB 3-per-page, Threads 20-30 cap). Pricing: Free 100 credits → $47 Freelance (25k credits) → $497 Business (500k) → custom Enterprise. Credits never expire. No rate limits. For the Solo-tier question specifically: the **$47 Freelance tier** is the lowest-viable working spend and covers months of ordinary cross-channel monitoring. Gap is real but narrow; vendor tiering closes it at a price even solo consultants can amortize. Vendor Companion row now added under SENSE at **S:● SMB:● E:◐**.
+
+### Procedure validation: vendor-official-first ordering prevented a wrong public verdict
+
+A separate ad-hoc baseline (preserved but marked superseded at `work/2026-04-19/01-scrapecreators-skill-gap-verdict.md`) concluded **"Partial gap"** on the premise that ad-library / Amazon Shop / SERP endpoints had no wrapper. That baseline never asked whether the vendor ships its own agent surface — pure intuition jumping straight to community wrappers. The fresh procedure-driven run (under [`specs/tool-review.md`](specs/tool-review.md) v0.2) mandated a vendor-official check **before** community wrapper search and caught the trifecta in two `gh api` calls. Net finding: **the vendor-official-first ordering isn't procedural polish; it prevents a full-context, intelligent reader from arriving at a factually wrong verdict.** Without the forcing function, intuition skips past the vendor's own agent surfaces every time the community-wrapper question is interesting.
+
+### Emerging signal: ecosystem-membership declarations in SKILL.md frontmatter
+
+The ScrapeCreators official SKILL.md declares `metadata.openclaw` in its frontmatter. GitHub code search surfaces `openclaw/skills`, `skills.sh`, and an `orth` CLI as related artifacts — suggesting an emerging agent-skill installer ecosystem that sits outside npm/GitHub as a distribution rail. Worth tracking because **ecosystem-membership declarations are a leading indicator**: a vendor declaring participation before the ecosystem has name recognition is an early-signal worth noting. Queued in the v0.3 tool-review backlog as a new signal class: when a SKILL.md declares `metadata.<ecosystem>`, that ecosystem itself may warrant a separate review.
+
+---
+
 ## 2026-04-18
 
 ### Second deep audit pass: regulated-enterprise screening of the curated ecosystem
