@@ -18,9 +18,11 @@ The question that drives every fishing trip is the same one that drives every ma
 
 ![Fishing - where it all started](<images/fishing.jpg>)
 
+Around 2005, I started helping my wife's real estate business and felt something familiar. Choosing which neighborhood to target was choosing which bay to fish. Designing flyers for her farm area was picking the right bait, the right color, the right presentation. Running an open house was sitting in one spot with multiple rods in the water, signs placed like a trail of bait to guide buyers to the door. The same uncertainty, the same preparation, the same rush when someone walks in. I didn't quit fishing. I replaced it. Completely different activities - exactly the same thrill.
+
 ### Real Estate Marketing (2005-2015)
 
-Around 2005, my wife Jasmina became a real estate agent in Toronto. I became her marketing department: SEO, content, email campaigns, SMS, and open houses. I even got my real estate license so I could work the open houses legally and engage with prospects directly.
+Jasmina became a real estate agent in Toronto, and I became her marketing department: SEO, content, email campaigns, SMS, and open houses. I even got my real estate license so I could work the open houses legally and engage with prospects directly.
 
 I learned fast. My first lesson was about targeting. I advertised Jasmina as a "Greater Toronto Area" real estate agent - five million people, zero leads. When I narrowed to "Richmond Hill Real Estate" and "North York Condos," leads started flowing. She ended up selling outside those areas anyway. Sharper the hook, better the catch.
 

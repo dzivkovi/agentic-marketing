@@ -66,7 +66,22 @@ How did each asset perform? What does the conversion funnel look like? Which seg
 
 Retrospectives, post-mortems, documented learnings, updated persona files, evolved brand voice notes, new creative guidelines, revised targeting rules. This is where the Self-Optimizing Feedback Loop lives conceptually - but with the important caveat that **self-mutating production systems need human-curated checkpoints**, not autonomous 3 AM rewrites. Learn is where the organization gets smarter; it should not be where the organization loses control.
 
-### 2.9 Sizing the Reader
+### 2.9 Mapping to Established Frameworks
+
+These 8 verbs were derived from practice, not theory. For readers familiar with established marketing frameworks, here's how they map. Dashes mark where the established framework has no equivalent - those gaps are where the operational decomposition does its most useful work for agent design.
+
+| Framework | SENSE | KNOW | DECIDE | MAKE | SHIP | MULTIPLY | MEASURE | LEARN |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Kotler (MR → STP → VP → MP → I → C) | Marketing Research | STP | Value Prop, Marketing Plan | - | Implementation | - | Control | - |
+| SOSTAC (PR Smith, 1990s) | Situation | Situation | Objectives, Strategy | Tactics | Action | - | Control | Control → Situation feedback loop |
+| RACE (Chaffey, 2010) | Plan | Plan | Plan | - | Reach, Act | Convert | - | Engage |
+| 4Ps (McCarthy / Kotler) | - | - | Product, Price | Promotion (creative) | Place, Promotion (distribution) | - | - | - |
+
+Three patterns worth noting. First, MAKE has no clean equivalent in any of the four frameworks. Kotler assumes production happens; SOSTAC files it under Tactics. But compliance review, brand voice enforcement, and creative production are where enterprise teams spend enormous time and where agent skills have the highest leverage. Second, the SENSE/KNOW split (continuous monitoring vs. persistent audience infrastructure) doesn't exist in any established framework, but it's essential for agent design because it separates "always running" skills from "quarterly refresh" skills. Third, MULTIPLY is absent from all four. CRO and repurposing exist as marketing concepts, but no framework treats "reshape what you already made" as a first-class activity. For agent design it matters because the input is already human-approved, which changes the risk profile entirely.
+
+These frameworks answer different questions. Kotler asks "how do you plan marketing strategy?" SOSTAC asks "how do you structure a marketing plan?" RACE asks "what stages does the customer move through?" The 8 verbs ask "what does a marketer actually do, and which of those activities can an AI agent help with?" The mapping is provided for orientation, not equivalence.
+
+### 2.10 Sizing the Reader
 
 The scored inventory in Section 3 uses a **Size Fit** column so you can locate yourself on the spectrum and skip what doesn't apply at your scale.
 
@@ -88,7 +103,7 @@ The muscles. Every activity I can identify that maps to the 8 verbs above, score
 - **AI Leverage %** - how much can agentic AI unblock this today? (100 = AI can do 80%+ of the work, 0 = the activity is inherently human)
 - **Priority Score** = Universality × Leverage ÷ 100, giving a naive combined score from 0-100
 - **Tier** - T1 Quick Win (score ≥60), T2 Core (40-59), T3 Transformation (20-39, high value but risky or complex), T4 Patient (high universality, low leverage - important to recognize but not AI targets yet), Trim (<15)
-- **Size Fit** - applicability by organization size (see Section 2.9): ● essential, ◐ helpful, - skip
+- **Size Fit** - applicability by organization size (see Section 2.10): ● essential, ◐ helpful, - skip
 
 The scores are my informed estimates, not measurements. Challenge them; they're a starting point, not a verdict.
 
@@ -291,6 +306,7 @@ Transparency. Things considered but not carried into the scored table, with a on
 - **Virtual Human Agent** (interactive avatar for live sales or support) - niche to a specific sales motion; not a universal marketing capability.
 - **Fully autonomous financial allocation** (agent moves budget with no human approval) - rejected in review; retained the *use case* but rewrote the *framing* to require HITL approval gates.
 - **Hyper-niche solo-creator workflows** (Chase AI's Twitter reply automation, GitHub trending scrapers) - not enterprise-safe; don't generalize to regulated environments.
+- **Engagement / conversational marketing** (community management, social media responses, live chat, conversational selling, receptionist scripts, upsell prompts) - operationally distinct from lead generation and content marketing. In the author's experience, engagement and conversion were the domain expert's job: the marketer's scope ended when the lead was in front of the closer. AI is well-suited to scriptable engagement (tone coaching, upsell prompts, response templates), but this activity sits at the marketing-sales boundary and was outside the scope of the practice that produced this framework. Worth revisiting as a ninth verb if agent skill development reveals it can't be cleanly housed under SHIP or LEARN.
 - **Self-rewriting production prompts at 3 AM without supervision** - retained in the Learn verb but scored T3/Patient and gated behind strict observability requirements.
 - **Full replacement of existing marketing automation platforms** (ripping out Salesforce, Adobe, Marketo) - explicitly out of scope; agents ride on top via MCP, they don't replace the backend.
 - **Company-specific use case mapping** - early iterations tried mapping to a specific organization's internal catalog, which polluted the skeleton; the final framing is deliberately industry-universal so it transfers across companies, verticals, and business sizes.
