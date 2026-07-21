@@ -8,6 +8,42 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ---
 
+## 2026-07-20
+
+### Editorial reset: maps, not report cards
+
+Three months of applied practice (2026-04 to 2026-07) settled an editorial question this log had been circling: this repo's public artifacts map the field (who does what, which verb, what size fit) and do not grade it. An internal April research batch had grown two draft procedures for comparing community-curated lists and formally scoring standards; both were retired before publication. The comparison work produced verdict-shaped output about named volunteer maintainers (read-first / skip / merge recommendations), and that is not this repo's place - comparative verdicts belong in paid engagements or in future us-vs-alternatives contexts where the maintainer has skin in the game. The retired batch still produced durable field findings; they are preserved below on their own merit, with the procedural apparatus stripped. The standing test before building any new research machinery here: would a reader pay for the output, or only be impressed by the machinery?
+
+### The free GEO measurement stack: GA4 and GSC expose AI Overviews asymmetrically
+
+Google's two free tools take opposite positions on AI traffic visibility. GA4: AI Overviews / AI Mode pass no distinct referrer - AI-driven visits fold into Organic/Direct and are invisible as a segment, even as AI referral traffic grows triple-digit YoY. GSC: AI Overviews ARE isolatable via the `Search appearance = AI Overview` filter (UI rolled out 2025-06, broadened Feb 2026; API: `dimensions=['searchAppearance']`). Same company, opposite exposure - the search team's narrative ("we still send you AI traffic") wins in GSC, the analytics team's default ("AI Overviews are still Google") wins in GA4. The practical free GEO MEASURE stack is therefore: GSC for pre-click AI visibility + GA4 for post-click behavior (AI-blind), with paid cross-engine citation tracking as the optional third layer. The AWESOME GEO section should make this stack explicit.
+
+### Knowledge surface vs execution surface
+
+A framing that clarified vendor-readiness patterns across the April research: MCP servers and CLIs are execution surfaces (how agents reach tools); SKILL.md is the knowledge surface (what agents know how to do with them). Vendors shipping both see materially higher agent-ecosystem adoption than vendors shipping execution only. GA4 is the canonical gap case: Google ships a mature official MCP but no skill - the agent-readable knowledge layer (when to use which Data API call, sampled-vs-unsampled interpretation, AI-traffic channel-group setup, `AI_OVERVIEW` isolation) is left to the ecosystem. GSC and GA4 knowledge-surface skills are direct candidates for this repo's `skills/` roadmap.
+
+### The agent-readiness stack composes: Skills x MCP x A2A
+
+By Q1 2026 the three core agent standards are consistently framed as layered, not competing: Agent Skills = knowledge surface (what agents know how to do), MCP = vertical tool access (how agents reach tools and data), A2A = horizontal agent-to-agent communication. Spec-level evidence of deliberate composition exists (a Skills-over-MCP working group). Governance milestones worth recording as foundational context: A2A's handoff to the Linux Foundation (a2aproject) completed 2025-06-23; MCP was donated to the LF Agentic AI Foundation 2025-12-09. Agent Skills remains Anthropic-led with no formal governance declared - the outlier of the three. The Anatomy's execution model (section 4.3) already pairs Skills with MCP; extending that framing to include A2A is queued.
+
+### Corey Haines's skill pack is the keystone of the public marketing-skills layer
+
+Cross-list research surfaced a structural fact about the public ecosystem: the marketing coverage inside the large community skill catalogs traces overwhelmingly to one source - `coreyhaines31/marketingskills` (absorbed into bigger aggregate lists, sometimes with attribution only visible at YAML level). Remove that single pack and skills-layer coverage of DECIDE / MULTIPLY / LEARN across the public awesome-list ecosystem thins out overnight. This is credit, not critique: one curator is carrying the field's marketing-skills layer. It also means the field has a single point of dependency, which is both a fragility worth naming and an open invitation - there is ample room for more contributors, this repo included. A deeper corpus study of Corey's themes and their reach across the creator ecosystem is at [research/2026-07-21-corey-haines-marketing-skills-corpus-research.md](research/2026-07-21-corey-haines-marketing-skills-corpus-research.md).
+
+### Frontier gap: strategy ships as advice, never as skills
+
+No public list ships strategy, positioning, or ICP work as portable Agent Skills; the closest neighbor is idea-generation. MEASURE-as-skill (analytics interpretation) and SENSE-as-skill (research / listening / intent detection) are similarly thin everywhere. For this repo's `skills/` roadmap: DECIDE-verb skills (positioning, ICP articulation, pricing strategy) built Anatomy-aligned would enter uncontested space. This is the single most actionable finding the April batch produced.
+
+### Star count decouples from curation depth in community lists
+
+Observed repeatedly: 3-4 star lists with 9-10 of 12 categories substantively covered, next to a 124-star list covering 5 of 12. Discovery in the awesome-list ecosystem rewards SEO-fit titles and freshness, not curation depth. Editorial implication for AWESOME Section F readers: do not rank community lists by stars.
+
+### Editorial convention adopted: disclose author affiliation
+
+One reviewed skill package interleaved genuinely useful curation with repeated recommendations of the author's own commercial product, disclosed only obliquely. Not disqualifying - but going forward, AWESOME list rows should note author affiliation whenever a skill author has a commercial interest in the space they document. Readers deserve to know when the librarian owns a bookstore.
+
+---
+
 ## 2026-04-19
 
 ### Terminology decision: GEO adopted as house term over AEO
