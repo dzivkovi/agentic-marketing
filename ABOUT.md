@@ -97,7 +97,7 @@ On the engineering side:
 
 ## What This Means for You
 
-If you're a marketer looking at AI and feeling overwhelmed by vendor pitches and hype cycles - the [Marketing Anatomy](research/Marketing-Anatomy.md) gives you the map. Eight verbs, forty-plus activities, scored by how much AI can actually help at your size.
+If you're a marketer looking at AI and feeling overwhelmed by vendor pitches and hype cycles - the [Marketing Anatomy](MARKETING-ANATOMY.md) gives you the map. Eight verbs, forty-plus activities, scored by how much AI can actually help at your size.
 
 The eight verbs in fishing terms, since that is where they came from: **Sense** is the sonar (what is moving in the water this week). **Know** is the chart (who you are fishing for and what they bite on, drawn once and corrected each season). **Decide** is where you cast. **Make** is the bait. **Ship** is the cast itself. **Multiply** is more rods in the water from one bait. **Measure** is the catch log. **Learn** is what you change next season. The line people most often blur is Sense against Know: Sense is what changed, Know is who the reader is and stays true for a quarter. A verified market fact is Sense; a brand voice rule is Make; Know is only the reader.
 

@@ -12,8 +12,10 @@ An open-source knowledge repository (being renamed from `agentic-marketing-skill
 
 The core documents:
 
-- **`research/Marketing-Anatomy.md`** - The framework itself: 7 commandments, 8 universal marketing verbs (Sense, Know, Decide, Make, Ship, Multiply, Measure, Learn), a scored inventory of ~40 activities, an execution model (Double Diamond, Co-Creation, Skills/MCP), and an NFR appendix. This is the "what and why."
-- **`research/Marketing-Vendors-By-Category.md`** - Living vendor companion organized by the same 8 verbs. This is the "who sells what." It grows independently of the Anatomy.
+- **`MARKETING-ANATOMY.md`** - The framework itself: 7 commandments, 8 universal marketing verbs (Sense, Know, Decide, Make, Ship, Multiply, Measure, Learn), a scored inventory of ~40 activities, an execution model (Double Diamond, Co-Creation, Skills/MCP), and an NFR appendix. This is the "what and why."
+- **`ROADMAP.md`** - Candidate futures with the trigger that would make each the next move, and the futures this repo refuses (a docs site, a complete tool catalogue, roadmaps without skills). Read it before proposing a restructure or a new top-level artifact; add to it rather than debating "what next" fresh.
+- **`research/README.md`** - Index of the research folder, which is dated evidence (tool reviews, vendor snapshots, corpus studies), not the method. Every file there carries its observation date.
+- **`research/Marketing-Vendors-By-Category.md`** - Dated vendor companion organized by the same 8 verbs. This is the "who sells what." It grows independently of the Anatomy.
 - **`AWESOME-MARKETING-SKILLS.md`** - Curated list of open-source marketing agent skills, tools, and resources organized by the 8 verbs. This is hand-curated, not auto-generated. Every link should be verified against a real public repo or URL before adding. Do not hallucinate repos.
 - **`CURATION-LOG.md`** - Editorial journal that accumulates compound learning from curating the skills list. Contains caveats about tools, coverage gaps, cross-category patterns, and open questions. When adding or reorganizing skills, check this log first for prior observations that should inform the decision. When you discover something noteworthy during research (a caveat, a gap, a pattern, a lead), add a dated entry here.
 

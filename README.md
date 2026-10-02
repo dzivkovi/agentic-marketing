@@ -1,40 +1,16 @@
 # Agentic Marketing
 
-An open-source framework for understanding what marketing actually is, where AI agents help, and how to decide what to DIY, hire out, or buy - whether you're a solo broker or a global brand.
+Before you buy an AI tool for marketing, know which of the eight kinds of marketing work it does. Most vendors are selling you one verb and calling it the whole job.
 
----
+This repository is a method, not a tool list. It decomposes marketing into eight verbs that every marketing organization performs, from a solo operator to a global brand, scores forty-plus activities by how much an AI agent can actually do today, and says which ones are worth doing yourself, hiring out, or buying. It was written from practice and is used in production every month.
 
-## What's Inside
-
-Three things, each usable on its own:
-
-1. **The Marketing Anatomy** - a framework that decomposes marketing into [7 commandments and 8 verbs](research/Marketing-Anatomy.md), scores 40+ activities by how much AI can help today, and maps each activity to a size tier (solo, SMB, enterprise). Start here if you need the map.
-2. **The Awesome List** - a [curated index of open-source agent skills, tools, and resources](AWESOME-MARKETING-SKILLS.md) organised by the same 8 verbs. Every entry is hand-verified, not auto-generated. Start here if you want tools you can use today.
-3. **The Tool Review Procedure** - a [reproducible methodology](specs/tool-review.md) to vet any marketing AI tool against the framework and produce a structured verdict in 20-40 minutes. Start here when a new vendor claims to have solved something and you want to cut through the noise.
-
-Looking for the author's background, influences, and two-decade path from real estate marketing to enterprise AI? See [ABOUT.md](ABOUT.md).
-
----
-
-## The 7 Commandments
-
-Every recommendation in this framework is anchored to these non-negotiable principles - each one a reaction to a real failure mode, not an aspiration.
-
-1. **Empathy before architecture.** Discovery and definition come before any boxes on a diagram.
-2. **Catalyst, not blank page.** Arrive with working samples so stakeholders react, not stare.
-3. **Co-Create - don't ping-pong.** Business owns the logic in plain text; IT owns the governance wrapper.
-4. **Decouple logic from platform.** The Agentic Skill is the portable unit - avoid unnecessary vendor lock-in.
-5. **Augment, don't replace.** Agents produce drafts; humans approve anything that changes state.
-6. **Default-deny MCP writes.** Read-only by default. Write access requires explicit authorization.
-7. **Observability is Day 1, not Day 2.** Guardrails, evals, and tracing ship with the first skill.
-
-The full reasoning behind each commandment is in [Section 1 of the Anatomy](research/Marketing-Anatomy.md#1-the-7-commandments).
+**Start here: [MARKETING-ANATOMY.md](MARKETING-ANATOMY.md)**, the whole method in one document. The rest of this page is the short version.
 
 ---
 
 ## The 8 Marketing Verbs
 
-These eight activities recur across most marketing organizations, from solo operator to global enterprise. Each maps to scored activities and size-fit guidance in [the Anatomy](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs).
+These eight activities recur across most marketing organizations. Each maps to scored activities and size-fit guidance in [section 2 of the Anatomy](MARKETING-ANATOMY.md#2-the-marketing-x-ray-8-universal-verbs).
 
 1. **SENSE** - Watch the market for signals. What changed this week: trends, competitors, regulators, search demand, what customers are saying. Continuous.
 2. **KNOW** - Build and maintain audience intelligence. Who you are talking to and what they bite on: ICPs, personas, jobs to be done, journey maps, vocabulary. Infrastructure: built once, refreshed quarterly, reused by every campaign. Know is only the reader; a verified market fact is Sense, a voice rule is Make.
@@ -45,50 +21,53 @@ These eight activities recur across most marketing organizations, from solo oper
 7. **MEASURE** - Attribute, dashboard, analyze.
 8. **LEARN** - Close the loop, update the playbook.
 
-The Sense/Know split is the one line no established framework draws, and it is the one that matters most for agents: Sense is an always-running skill, Know is a quarterly-refresh asset. In one breath: Sense is the sonar, Know is the chart, Decide is where you cast.
+The Sense/Know split is the one line no established framework draws, and it is the one that matters most for agents: Sense is an always-running skill, Know is a quarterly-refresh asset. In one breath: Sense is the sonar, Know is the chart, Decide is where you cast. How the verbs map to Kotler, SOSTAC, RACE and the 4Ps, and where those frameworks have no equivalent, is [section 2.9](MARKETING-ANATOMY.md#29-mapping-to-established-frameworks).
 
 ---
 
-## The Tool Review Procedure
+## What it looks like in use
 
-Every week a new marketing AI tool claims to solve something. Most are noise, a few are real - and distinguishing them takes hours of research that every buyer redoes independently. This repo contains a **reproducible methodology** to evaluate any tool against the 8-verb Anatomy and produce a structured verdict in 20-40 minutes.
+One worked example, running monthly since mid-2026 for a solo real-estate practice in a large metro market:
 
-**What it produces:**
+- **SENSE** runs without a human. A scheduled cloud agent watches the regional board's data release and emails the operator the morning it lands. Feeds, five listening corpora (what buyers and owners are actually saying), a search-demand snapshot, and a fact gate that verifies every number against its primary source before anyone decides anything.
+- **KNOW** is read, not run. A one-page compass holds the reader profile and the persona; every stage consults it, nothing rewrites it mid-month.
+- **DECIDE** is the first human moment. The agents build a three-angle menu with receipts; the operator picks one.
+- **MAKE** drafts to a format spec and passes three gates: a logic-and-slop review, a persona-and-compliance review, and an independent second-model check on every number and legal claim.
+- **SHIP** stages a private preview the operator reads on a phone, then a production deploy that runs only on an explicit yes.
+- **MULTIPLY** turns the article into a carousel, a four-card social gallery and a short video, built from one text file. An agent fills the social composer; the human presses Post.
+- **MEASURE and LEARN** write back what shipped, what each angle earned, and what the next run should do differently.
 
-- **3-state verdict** - `Wrapper` (public API, skill-wrappable in a day), `Hybrid` (API + real orchestration needed), or `Hard` (proprietary moat, scraping-only, or enterprise-gated).
-- **Persona-relative skill-gap** - `No gap` / `Partial` / `Yes`, evaluated per named audience. The same tool can be a no-gap for a GTM engineer and a partial-gap for a solo broker; the procedure forces you to name who you're evaluating for.
-- **Verb fit** - which of the 8 Anatomy verbs the tool primarily serves, with secondary verbs where the output enables downstream work.
-- **Vendor-official runtime check** - does the vendor already ship an MCP, CLI, or Agent Skill? If yes, the "should we wrap this ourselves?" question often collapses before it's asked.
-
-**Two artifacts, one methodology:**
-
-| Path | Role |
-| --- | --- |
-| [`specs/tool-review.md`](specs/tool-review.md) | The **procedure** - a 5-leg methodology (internal grep → docs → wrapper search → alternatives → verdict). Read this to understand or run the method manually. |
-| [`.claude/commands/review-tool.md`](.claude/commands/review-tool.md) | The **slash command** - type `/review-tool <tool-name>` in Claude Code to invoke the procedure automatically and persist the output. |
-
-Recipe (spec) vs. microwave button (command). The procedure is the canonical method; the command is the keyboard shortcut.
-
-**Example:** a fresh review of ScrapeCreators (a multi-platform scraping API for 27+ social and search platforms) classified it as **Wrapper** with **No gap across four personas** - because the vendor already ships a hosted MCP, an official CLI, and an official Agent Skill. The full output lives at [`research/tool-reviews/scrapecreators.md`](research/tool-reviews/scrapecreators.md).
-
-**Why this is in the repo:** the Anatomy tells you *what* to look for in a marketing tool; the procedure tells you *how* to look systematically. Together they let any reader - solo marketer, GTM engineer, or enterprise architect - independently vet a vendor and produce a verdict that's comparable to anyone else's. No more vendor-by-vendor guesswork.
+Eleven stages, four human moments, zero numbers published without a primary source. The method is the same at enterprise scale; only the instrumentation, budget and governance change.
 
 ---
 
-## Where This Is Going
+## The 7 Commandments
 
-The framework maps the territory. The next step is **building the tools to work it.**
+Every recommendation in this framework is anchored to these principles, each one a reaction to a real failure mode, not an aspiration.
 
-This project will grow to include actual [Agent Skills](https://agentskills.io) - portable SKILL.md files that any AI agent can use to execute real marketing workflows. Skills built here work across Claude Code, Claude Cowork, Microsoft Copilot, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot, and [30+ other compatible tools](https://agentskills.io). The goal: build once, run on any platform with a compatible agent.
+1. **Empathy before architecture.** Discovery and definition come before any boxes on a diagram.
+2. **Catalyst, not blank page.** Arrive with working samples so stakeholders react, not stare.
+3. **Co-Create - don't ping-pong.** Business owns the logic in plain text; IT owns the governance wrapper.
+4. **Decouple logic from platform.** The Agentic Skill is the portable unit - avoid unnecessary vendor lock-in.
+5. **Augment, don't replace.** Agents produce drafts; humans approve anything that changes state.
+6. **Default-deny MCP writes.** Read-only by default. Write access requires explicit authorization.
+7. **Observability is Day 1, not Day 2.** Guardrails, evals, and tracing ship with the first skill.
 
-For each skill, I'll map:
+The full reasoning behind each commandment is in [section 1 of the Anatomy](MARKETING-ANATOMY.md#1-the-7-commandments).
 
-- **Deterministic logic** - rules, templates, checklists (the parts that never need LLM reasoning)
-- **Non-deterministic logic** - creative judgment, synthesis (where the LLM reasons)
-- **MCP connectors** - which APIs and systems the skill needs (CRM, CMS, DAM, analytics)
-- **HITL gates** - where a human must review before anything changes state
+---
 
-Skills are built where they are used, inside the operating repos that run real marketing, and the ones that prove general will be published here. The [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) curates existing skills by others that you can use today - organized by the same 8 marketing verbs.
+## When a vendor claims to have solved something
+
+You do not need to review every marketing AI tool. You need a 20-minute way to review the one in front of you. [specs/tool-review.md](specs/tool-review.md) is that procedure: five legs, ending in a three-state verdict (`Wrapper`, `Hybrid`, `Hard`), a persona-relative skill-gap call, the verb fit, and a check whether the vendor already ships an MCP, CLI or Agent Skill, which often ends the "should we wrap this ourselves" question before it starts. In Claude Code, `/review-tool <name>` runs it ([.claude/commands/review-tool.md](.claude/commands/review-tool.md)).
+
+Worked reviews and the vendor-by-verb companion live in [research/](research/README.md), dated. Tools change monthly; the verbs do not. [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) is a hand-verified list of open-source agent skills and tools by verb, for readers who want something they can use today.
+
+---
+
+## Where this is going
+
+[ROADMAP.md](ROADMAP.md) holds the candidate futures for this repository, each with the trigger that would make it the next move and the reasons it is not yet. Skills are built where they are used, inside the operating repositories that run real marketing; the ones that prove general will be published here.
 
 ---
 
@@ -96,14 +75,15 @@ Skills are built where they are used, inside the operating repos that run real m
 
 | Path | What it is |
 | --- | --- |
-| [ABOUT.md](ABOUT.md) | The full origin story: from fishing to real estate marketing to enterprise AI architecture |
-| [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) | Curated list of marketing agent skills, tools, and resources - organized by the 8 verbs |
-| [CURATION-LOG.md](CURATION-LOG.md) | Editorial journal: caveats, gaps, patterns, and open questions discovered while curating the skills list |
+| [MARKETING-ANATOMY.md](MARKETING-ANATOMY.md) | The method: 7 commandments, 8 verbs, scored inventory, execution model, NFR defense |
+| [ROADMAP.md](ROADMAP.md) | Candidate futures with triggers; what this repo refuses to become |
+| [ABOUT.md](ABOUT.md) | The origin story: from fishing to real estate marketing to enterprise AI architecture |
 | [CHANGELOG.md](CHANGELOG.md) | Release history: what shipped in each tagged version |
-| [research/Marketing-Anatomy.md](research/Marketing-Anatomy.md) | The core framework: 7 commandments, 8 verbs, scored inventory, execution model, NFR defense |
-| [research/Marketing-Vendors-By-Category.md](research/Marketing-Vendors-By-Category.md) | Living companion doc: vendors and tools per marketing verb, with size-tier fit |
-| [images/](images/) | Supporting images (Double Diamond diagram, certificate, fishing photo) |
-| [research/](research/) | All research and reference documents |
+| [specs/tool-review.md](specs/tool-review.md) | The 20-minute tool review procedure |
+| [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) | Curated, hand-verified list of marketing agent skills and tools, by verb |
+| [CURATION-LOG.md](CURATION-LOG.md) | Editorial journal behind the list: caveats, gaps, patterns, open questions |
+| [research/](research/README.md) | Dated evidence: worked tool reviews, the vendor-by-verb companion, practitioner corpus studies |
+| [images/](images/) | Supporting images |
 
 ---
 
