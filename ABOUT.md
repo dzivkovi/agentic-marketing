@@ -69,7 +69,7 @@ The marketing thread went quiet as I dove into cloud computing and AI:
 
 Two seemingly unconnectable threads - a decade of marketing technology and a decade of enterprise AI - are now converging. AI makes marketing systematizable in ways it never was before. The patterns I learned from fishing (read the water, match the bait, be patient), from real estate (specificity beats reach, give before you ask), and from enterprise IT (build the bridge, show don't tell, catalyst not blank page) all apply directly to the problem of introducing agentic AI into marketing organizations.
 
-In 2026, I began helping a major global payments company introduce agentic AI into their marketing organization. It wasn't a pivot - it was a convergence. Two decades of marketing instinct and enterprise architecture finally had the same address. This framework is what came out of it.
+In 2026, I began helping a Fortune 500 financial-services company introduce agentic AI into its marketing organization. It wasn't a pivot - it was a convergence. Two decades of marketing instinct and enterprise architecture finally had the same address. This framework is what came out of it.
 
 This convergence isn't unique to me - it's the shape of a new role taking form. Product-minded technologists and tech-savvy product managers are becoming **the riders of AI**.
 
@@ -98,6 +98,8 @@ On the engineering side:
 ## What This Means for You
 
 If you're a marketer looking at AI and feeling overwhelmed by vendor pitches and hype cycles - the [Marketing Anatomy](research/Marketing-Anatomy.md) gives you the map. Eight verbs, forty-plus activities, scored by how much AI can actually help at your size.
+
+The eight verbs in fishing terms, since that is where they came from: **Sense** is the sonar (what is moving in the water this week). **Know** is the chart (who you are fishing for and what they bite on, drawn once and corrected each season). **Decide** is where you cast. **Make** is the bait. **Ship** is the cast itself. **Multiply** is more rods in the water from one bait. **Measure** is the catch log. **Learn** is what you change next season. The line people most often blur is Sense against Know: Sense is what changed, Know is who the reader is and stays true for a quarter. A verified market fact is Sense; a brand voice rule is Make; Know is only the reader.
 
 If you're an engineer who gets pulled into marketing projects and doesn't speak the language - this framework translates. Same systems thinking, different domain.
 

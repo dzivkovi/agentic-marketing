@@ -36,14 +36,16 @@ The full reasoning behind each commandment is in [Section 1 of the Anatomy](rese
 
 These eight activities recur across most marketing organizations, from solo operator to global enterprise. Each maps to scored activities and size-fit guidance in [the Anatomy](research/Marketing-Anatomy.md#2-the-marketing-x-ray-8-universal-verbs).
 
-1. **SENSE** - Watch the market for signals.
-2. **KNOW** - Build and maintain audience intelligence.
-3. **DECIDE** - Choose what to say, to whom, when, for how much.
+1. **SENSE** - Watch the market for signals. What changed this week: trends, competitors, regulators, search demand, what customers are saying. Continuous.
+2. **KNOW** - Build and maintain audience intelligence. Who you are talking to and what they bite on: ICPs, personas, jobs to be done, journey maps, vocabulary. Infrastructure: built once, refreshed quarterly, reused by every campaign. Know is only the reader; a verified market fact is Sense, a voice rule is Make.
+3. **DECIDE** - Choose what to say, to whom, when, for how much. Where Sense meets Know.
 4. **MAKE** - Produce the assets and survive compliance review.
 5. **SHIP** - Push to channels, on schedule, in the right language.
 6. **MULTIPLY** - Reshape and personalize what you already made.
 7. **MEASURE** - Attribute, dashboard, analyze.
 8. **LEARN** - Close the loop, update the playbook.
+
+The Sense/Know split is the one line no established framework draws, and it is the one that matters most for agents: Sense is an always-running skill, Know is a quarterly-refresh asset. In one breath: Sense is the sonar, Know is the chart, Decide is where you cast.
 
 ---
 
@@ -86,7 +88,7 @@ For each skill, I'll map:
 - **MCP connectors** - which APIs and systems the skill needs (CRM, CMS, DAM, analytics)
 - **HITL gates** - where a human must review before anything changes state
 
-The [skills roadmap](skills/README.md) lists the T1 Quick Wins targeted for first development. The [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) curates existing skills by others that you can use today - organized by the same 8 marketing verbs.
+Skills are built where they are used, inside the operating repos that run real marketing, and the ones that prove general will be published here. The [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) curates existing skills by others that you can use today - organized by the same 8 marketing verbs.
 
 ---
 
@@ -100,7 +102,6 @@ The [skills roadmap](skills/README.md) lists the T1 Quick Wins targeted for firs
 | [CHANGELOG.md](CHANGELOG.md) | Release history: what shipped in each tagged version |
 | [research/Marketing-Anatomy.md](research/Marketing-Anatomy.md) | The core framework: 7 commandments, 8 verbs, scored inventory, execution model, NFR defense |
 | [research/Marketing-Vendors-By-Category.md](research/Marketing-Vendors-By-Category.md) | Living companion doc: vendors and tools per marketing verb, with size-tier fit |
-| [skills/](skills/) | Roadmap and future home for SKILL.md files per marketing activity |
 | [images/](images/) | Supporting images (Double Diamond diagram, certificate, fishing photo) |
 | [research/](research/) | All research and reference documents |
 

@@ -42,6 +42,8 @@ Every marketing cycle begins with monitoring what's moving in the market: trendi
 
 Separate from what's trending is *who you're selling to*. Every big marketing org maintains (or should maintain) persistent audience assets: ICPs for B2B, segments for B2C, personas, jobs-to-be-done, journey maps, brand-affinity profiles, emotional registers, vocabulary catalogs. Unlike Sense, which is continuous, Know is **infrastructure** - heavy upfront investment, periodically refreshed, reused across every campaign. Kieran's Audience Profiling Engine lives here.
 
+The test that separates the two is tempo, not topic: Sense answers "what changed this week," Know answers "who are we talking to, and what do they bite on," and that answer should still hold next quarter. Two things that look like Know but are not: verified facts about the market (a central-bank rate, a regulator's deadline, a published statistic) are Sense that has been checked against its primary source, and brand voice or compliance rules are Make's guardrails. Know is only the reader.
+
 ### 2.3 DECIDE: Choose what to say, to whom, when, for how much
 
 The strategic fulcrum. Position the brand, pick the message, ideate the campaign, approve the editorial/content calendar, allocate the budget across channels and time windows. The Performance-Driven Lookalike and Voice of Customer patterns live here because they replace guesswork with evidence. The editorial calendar is always a first-class artifact in this verb - it governs what ships when even when AI is never invoked.
