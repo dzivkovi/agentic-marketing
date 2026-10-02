@@ -2,6 +2,18 @@
 
 All notable changes to this project are recorded here. Tag annotations remain minimal; narrative detail lives in this file. For editorial reasoning behind individual additions, see [CURATION-LOG.md](CURATION-LOG.md).
 
+## v2.2 - The Sense/Know line drawn, framework mapping, skills roadmap withdrawn
+
+Six months of using the eight verbs in production surfaced one recurring confusion, and it was the author's own: when explaining the method to a room, KNOW kept blurring into SENSE. The verbs were right; the explanation was thin. This release fixes the explanation, adds the mapping to established frameworks that readers kept asking for, and removes the one part of the repo that promised more than it delivered.
+
+- **The Sense/Know line.** Section 2.2 of the Anatomy now states the test that separates the two: tempo, not topic. Sense answers "what changed this week"; Know answers "who are we talking to and what do they bite on", and that answer should still hold next quarter. Two things that look like Know but are not are named: a verified market fact (a central-bank rate, a regulator's deadline, a published statistic) is Sense checked against its primary source, and brand voice or compliance rules are Make's guardrails. Know is only the reader. The README verb list carries the same line in one clause each for Sense, Know and Decide, and ABOUT.md gives all eight verbs in the fishing terms the method came from. The ruling was tested against an independent second model before it was written down, and it changed how an operating repo classifies its own fact-checking stage (from Know to Sense).
+- **Section 2.9, mapping to established frameworks.** Kotler, SOSTAC, RACE and the 4Ps, verb by verb, with the gaps marked. The three gaps are the point: MAKE has no clean equivalent anywhere, the Sense/Know split exists in no established framework, and MULTIPLY is absent from all four. Added 2026-04-29 with the ENGAGE exclusion (section 6).
+- **Skills roadmap withdrawn.** `skills/` held a roadmap and no skills, which a reader correctly reads as abandonment. Skills are built where they are used, inside the operating repos that run real marketing; the ones that prove general will be published here. Until then the repo makes no promise it is not keeping.
+- **Research additions.** `research/2026-07-21-corey-haines-marketing-skills-corpus-research.md` and `research/2026-07-21-haines-flanagan-venn-vs-anatomy.md`: two public practitioner corpora read against the Anatomy, with the overlaps and the gaps on each side. Both dated; both research, not method.
+- **Wording.** Public-tree files describe the method's origin in environment-neutral terms.
+
+What did not change: the eight verbs, the seven commandments, the scored inventory and its tiers. The scores still carry their April 2026 assessment date and are estimates, as section 3 says.
+
 ## v2.1 - GEO category formalized across MEASURE + SENSE + SHIP
 
 AI-answer-engine visibility is becoming the new search visibility. When a prospect asks ChatGPT, Perplexity, or Google AI Overviews "what's the best X for Y?", being cited in the answer is rapidly becoming as consequential as ranking first on Google was a decade ago. Gartner is calling for a 25% drop in traditional-search volume in 2026 alone. Practitioners are reaching for a vocabulary to name the new discipline: GEO (Generative Engine Optimization), sometimes called AEO (Answer Engine Optimization).
