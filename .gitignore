@@ -20,3 +20,7 @@ plans/
 # Personal Claude Code settings (project settings.json is shared)
 .claude/settings.local.json
 
+
+# Python bytecode from scripts/check_links.py
+__pycache__/
+*.pyc
