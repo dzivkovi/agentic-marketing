@@ -10,6 +10,7 @@ Everything here is a snapshot of how an assessment was made on a given day: a to
 | [tool-reviews/scrapecreators.md](tool-reviews/scrapecreators.md) | A full run of the review procedure on one vendor; the reference output | 2026-04 |
 | [2026-07-21-corey-haines-marketing-skills-corpus-research.md](2026-07-21-corey-haines-marketing-skills-corpus-research.md) | A public practitioner's talk corpus indexed and read for its marketing-skills themes | 2026-07-21 |
 | [2026-07-21-haines-flanagan-venn-vs-anatomy.md](2026-07-21-haines-flanagan-venn-vs-anatomy.md) | Two practitioners' skill taxonomies drawn against the eight verbs: overlaps, gaps on each side, what to adopt | 2026-07-21 |
+| [2026-11-04-six-month-revalidation.md](2026-11-04-six-month-revalidation.md) | The receipts behind v2.3: every score change, commandment rewording, attribution check and external-fact correction, with verbatim quotes and timestamped links; plus the second-model review in short | 2026-11-04 |
 | [Marketing-Anatomy.md](Marketing-Anatomy.md) | A stub. The Anatomy moved to the repository root on 2026-10-01; this keeps older links alive | |
 
 Reviews that depend on unverified pricing or a single vendor's claims are held back until they can be checked, and are not in this folder.
