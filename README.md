@@ -30,7 +30,7 @@ The Sense/Know split is the one line no established framework draws, and it is t
 One worked example, running monthly since mid-2026 for a solo real-estate practice in a large metro market:
 
 - **SENSE** runs without a human. A scheduled cloud agent watches the regional board's data release and emails the operator the morning it lands. Feeds, five listening corpora (what buyers and owners are actually saying), a search-demand snapshot, and a fact gate that verifies every number against its primary source before anyone decides anything.
-- **KNOW** is read, not run. A one-page compass holds the reader profile and the persona; every stage consults it, nothing rewrites it mid-month.
+- **KNOW** is read, not run. A one-page compass holds the reader profile and the persona; every stage consults it, nothing rewrites it mid-month, and the month's learnings are folded in by a human at the end of the run.
 - **DECIDE** is the first human moment. The agents build a three-angle menu with receipts; the operator picks one.
 - **MAKE** drafts to a format spec and passes three gates: a logic-and-slop review, a persona-and-compliance review, and an independent second-model check on every number and legal claim.
 - **SHIP** stages a private preview the operator reads on a phone, then a production deploy that runs only on an explicit yes.
