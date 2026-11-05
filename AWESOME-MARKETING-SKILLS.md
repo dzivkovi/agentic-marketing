@@ -1,194 +1,127 @@
 # Awesome Marketing Skills
 
-> Curated skills, tools, and resources for AI-powered marketing - organized by the [8 marketing verbs](MARKETING-ANATOMY.md#2-the-marketing-x-ray-8-universal-verbs). Built on the [Agent Skills](https://agentskills.io) open standard.
+> A short, checked list of agent skills, plugins and tools for marketing work, organized by the [8 marketing verbs](MARKETING-ANATOMY.md#2-the-marketing-x-ray-8-universal-verbs). Built on the open [Agent Skills](https://agentskills.io) standard. **Checked 2026-11-04** with [scripts/check_links.py](scripts/check_links.py): every repository below was alive and pushed to within the previous six months on that date unless its row says otherwise. Star counts are from that day and will drift.
 
-This is a living list. It grows as the ecosystem grows. Contributions welcome.
+## Why this list got shorter
+
+The first version of this page (April 2026) was wide: seven skill packs, fifty-one deep links into individual skills, tools under every verb. Six months later eighteen of those fifty-one links were dead, because maintainers rename and merge skills faster than any list is edited, and the practitioners I follow had reached the same conclusion I had about wide lists:
+
+- Most skills people install are "cool for about a day, but then I never used them again" (Rick Mulready). "Generic skills are extremely worthless" (Austin Marchese). People collect skill repos "like Pokémon cards" (Nate B. Jones).
+- Of the skills one security vendor scanned in early 2026, 13 percent had a critical issue and 76 were confirmed malicious. No marketing skill made the most-installed top ten on the largest registry.
+- The habit that holds up: take one skill from a pack, read it, run it on real work, keep it only if you reached for it again within a month.
+
+This is a map, not my tested stack: I run a small subset of it alongside workflows I built myself, and I have not run every entry end to end. You do not need the whole list; you need the two or three rows that match the verb you are stuck on.
+
+So this list now does three jobs. It names the packs and vendor surfaces that were alive on the check date, with whatever third-party use or review the research found (it varies by entry, and the row says so when there is none). It maps them to the verbs so you can find the one you need. And it tells you how to vet anything else yourself, because the next good skill will appear after this page was last checked.
+
+What this list does not do: grade volunteer maintainers. Rows carry facts (what it does, the verb, the agent surface, the price gate, the last check). A repository that left the tables left because its last push was more than six months old or the owner published a replacement, not because it was judged.
 
 ---
 
-## Skill Repositories
+## Skill packs and plugins
 
-Complete marketing skill collections that work with Claude Code, Codex, Gemini CLI, Cursor, and other [Agent Skills-compatible tools](https://agentskills.io).
+Install one skill, not the pack. "Terminal agents" below means Claude Code, Codex and their peers; "the Claude app" means the desktop or web app; a connector (MCP) is something your AI app signs in to. Every install command below pulls a whole repository; read `SKILL.md` for the one you want before you let an agent run it (see [How to vet a skill](#how-to-vet-a-skill-before-you-install-it)).
 
-| Repo | Skills | What it covers | Stars |
+| Pack | Owner | What it covers | Verbs | Runs in, and how to install | Price gate | Checked 2026-11-04 |
+| --- | --- | --- | --- | --- | --- | --- |
+| [marketingskills](https://github.com/coreyhaines31/marketingskills) | Corey Haines | 53 skills across the whole cycle: research, positioning, copy, CRO, SEO, email, ads, analytics; plus guides for 60-plus CLI tools | all eight | Terminal agents (Claude Code, Codex) or the Claude app. `npx skills add coreyhaines31/marketingskills` (add `-a claude-code` when you run it from inside a Claude Code session, or it installs where Claude Code does not look); as a Claude plugin: `claude plugin marketplace add coreyhaines31/marketingskills` then `claude plugin install marketing-skills@marketingskills`; also a Codex plugin and per-skill zips. The shared context file every skill reads first is `.agents/product-marketing.md` | Free, MIT. Funded by disclosed partners; the author's paid layer is Magister (hosted agent with memory, from $99 a month), which the repo does not require | 58.5k stars, release v2.14.0 on 2026-10-30. v2.0 (May 2026) renamed 17 skills, which is what broke the April deep links |
+| [knowledge-work-plugins: marketing](https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing) | Anthropic | Brand review, campaign plan, competitive brief, content creation and drafting, email sequence, performance report, SEO audit; connectors for HubSpot, Ahrefs, Similarweb, Klaviyo, Canva, Figma, Slack, Notion, Amplitude, Supermetrics | DECIDE, MAKE, SHIP, MEASURE, SENSE | The Claude app and Claude Code. `claude plugin marketplace add anthropics/knowledge-work-plugins` then `claude plugin install marketing@knowledge-work-plugins` | Free, Apache 2.0; each connector needs its own vendor account | Active (last push September 2026). Its README lists commands that no longer match the tree; the skills are the source of truth. Its `seo-audit` skill has the same name as Corey Haines's, so both will answer an SEO-audit request if you install both |
+| [knowledge-work-plugins: small-business](https://claude.com/marketplace/plugins/small-business) | Anthropic | 44 skills for running a small company, of which about a dozen are marketing: ad manager, Canva creator, content strategy, growth pulse, review reputation, SEO and AI visibility, social content engine, lead finder, outreach composer, brand style; a plain-English router and approval gates on anything that sends, posts or pays | SENSE, DECIDE, MAKE, SHIP, MEASURE | The Claude app (install from the marketplace page) or Claude Code (`claude plugin install small-business@knowledge-work-plugins`) | Free; 35 declared connectors (HubSpot, Mailchimp, Canva, Shopify, Stripe, Zapier and others) each need an account | Announced 2026-05-13; v1.35.1 in September 2026 |
+| [gtm-cheat-codes](https://github.com/zapier/gtm-cheat-codes) | Zapier | 21 skills Zapier's own go-to-market teams use: campaign generator, brand guidelines builder, HTML mockup builder, campaign post-mortem, customer proof, story writer, recording-to-clip, plus sales and RevOps skills; approval gates built in | KNOW, DECIDE, MAKE, SHIP, MULTIPLY, LEARN | Any agent that reads skill folders (Claude Code, Codex, Cursor): copy the skill folder into your agent's skills directory; there is no one-line installer. Zapier's connector is optional, for actions | Free, MIT | 356 stars; last push 2026-07-13. No independent review found |
+| [social-media-research-skills](https://github.com/ScrapeCreators/social-media-research-skills) | ScrapeCreators (vendor) | 13 research workflows over their scraping API: outlier-post finder, transcript intelligence, comment mining, competitor social research, ad-library teardown, trend discovery, influencer prospecting, audience research, content repurposing | SENSE, KNOW, MULTIPLY | Terminal agents: `npx skills add ScrapeCreators/social-media-research-skills` with `SCRAPECREATORS_API_KEY`; the vendor also ships a hosted connector (MCP) and a CLI | Pay as you go: 100 free credits, then from $47 | 5.6k stars; the vendor's pricing page offers 100 credits for a GitHub star. The API behind it was recommended by last30days's author in July 2026 ("the most valuable API key to get"); no independent review of the skills themselves found. The vendor's April `agent-skills` repo was last pushed 2026-04-09 |
+| [newsjack](https://github.com/elvisun/newsjack) | Elvis Sun (Medialyst) | 33 PR skills in four lanes: detect (monitoring, triage, coverage tracking), act (angles, headlines, fact-check, journalist fit, media lists, crisis holding), strategize, and an AI-visibility lane; ships an ethics doctrine against mass blasts | SENSE, MAKE, SHIP, MEASURE | Terminal agents (skill folders) and the Claude app (plugin marketplace `elvisun/newsjack`); the project also offers a shell installer at newsjack.sh | Skills free, MIT. Live news search, journalist enrichment and media lists work best with the author's paid Medialyst account (from $149 a month); most skills run without it | 1.7k stars, 26 releases, last 2026-10-22. No independent review found |
+| [semrush/skills](https://github.com/semrush/skills) | Semrush (vendor) | Technical SEO audit, internal-link audit, schema, keyword research, content brief, SERP analysis, backlink audit, competitor gap | SENSE, MEASURE, MAKE | Terminal agents: `npx skills add semrush/skills` | Needs a Semrush subscription with API access | Created 2026-09-14; small and new |
+| [canva-skills](https://github.com/canva-sdks/canva-skills) | Canva (vendor) | Brand check, bulk create, edit design, design feedback, resize for social, a Canva CLI | MAKE, MULTIPLY | Claude Code (`/plugin marketplace add canva-sdks/canva-skills` then `/plugin install canva@canva-skills`); also Codex and Cursor marketplaces | Canva account; bulk create needs Canva Enterprise | Active since December 2025 |
+| [agent-cli-skills](https://github.com/HubSpot/agent-cli-skills) | HubSpot (vendor) | 19 skills that drive the HubSpot agent CLI: bulk operations, audience targeting, CRM data quality, deal management, reporting, workflow automation. CRM and ops, not campaign craft | KNOW, SHIP, MEASURE | Terminal agents only: install HubSpot's `hubspot` CLI (beta) first, then `npx skills hubspot/agent-cli-skills` (HubSpot's README writes it without `add`) | Free, Apache 2.0; HubSpot account; the CLI is in beta | Created May 2026, last push 2026-10-28 |
+| [DataForSEO MCP](https://github.com/dataforseo/mcp-server-typescript) and [skill templates](https://dataforseo.com/templates/ai-skills/) | DataForSEO (vendor) | Pay-per-call SEO and GEO data: SERPs including AI Overviews and AI Mode, keywords, backlinks, on-page, business data, and an AI Optimization API (LLM responses, mentions, AI keyword data). The templates are ready-made skills: AI visibility report, client SEO report, AI content plan, PPC keyword gap | SENSE, MEASURE | Any app that takes a connector: hosted MCP at `https://mcp.dataforseo.com/v3/mcp` (OAuth) or local `npx dataforseo-mcp-server@latest`; a SKILL.md for terminal agents; a Codex plugin (October 2026) | Pay as you go, self-serve: $1 free credit, $50 minimum top-up, balance never expires | MCP server Apache 2.0, v3 in 2026. Third-party skill packs built on it exist; several carry affiliate links |
+| [adobe/skills](https://github.com/adobe/skills) | Adobe (vendor) | Official Adobe skills; grew from 17 AEM skills in April to about 89 across Adobe products | MAKE, SHIP | Terminal agents: skill folders | Adobe products | Active |
+| [ai-marketing-skills](https://github.com/ericosiu/ai-marketing-skills) | Eric Siu | Growth experiments, sales pipeline, content ops, outbound, SEO | SENSE, DECIDE, MAKE, SHIP, MEASURE | Terminal agents: skill folders | Free | 3.8k stars, last push November 2026 |
+| [no-ai-slop](https://github.com/petergyang/no-ai-slop) | Peter Yang | One skill that strips 20-plus AI-writing patterns while keeping the author's voice; a detect-only mode | MAKE | Terminal agents: `npx skills add petergyang/no-ai-slop --skill no-ai-slop --global` (the README adds `--yes`; leave it off so you see what it installs) | Free, MIT | 13k stars since July 2026. Featured by Greg Isenberg (September 2026); one published critique argues that removing machine tells does not add a person's substance |
+| [claude-seo](https://github.com/AgriciDaniel/claude-seo) | Daniel Agrici | 26 SEO sub-skills and 19 sub-agents: technical SEO, E-E-A-T, content, local, schema | SENSE, MAKE, MEASURE | Terminal agents: skill folders | Free | 26.7k stars, last push November 2026 |
+| [last30days](https://github.com/mvanhorn/last30days-skill) | Matt Van Horn | Research any topic across Reddit, X, YouTube, Hacker News, Polymarket and the web into a cited brief | SENSE | Terminal agents: skill folder; also a Gemini extension | Free; source APIs optional | 66.6k stars, pushed November 2026 |
+
+Smaller packs still alive on 2026-11-04, kept for completeness: [realjaymes/marketingagentskills](https://github.com/realjaymes/marketingagentskills) (34 skills, 68 stars), [pawbytes/skill-suites](https://github.com/pawbytes/skill-suites) (50-plus skills across marketing and creative suites, 117 stars), [CosmoBlk/email-marketing-bible](https://github.com/CosmoBlk/email-marketing-bible) (one deep email skill, 364 stars).
+
+Not in the tables this time, with the fact that moved them: [BrianRWagner/ai-marketing-claude-code-skills](https://github.com/BrianRWagner/ai-marketing-claude-code-skills) (last push 2026-03-19), [wshuyi/x-article-publisher-skill](https://github.com/wshuyi/x-article-publisher-skill) (last push 2026-01-25), [ScrapeCreators/agent-skills](https://github.com/ScrapeCreators/agent-skills) (last push 2026-04-09; the vendor's newer repo is above). Not listed because the download needs a form or a paid subscription: HubSpot's "Marketer's Claude Skills Library" (10 skills) and "Marketer's Agent Skills Pack" (5 skills) sit behind lead forms; the "11-skill AI content team" page delivers one skill, with the rest behind a paid newsletter.
+
+---
+
+## By verb: where to look first
+
+| Verb | Start with | Free first-party tools | Notes |
 | --- | --- | --- | --- |
-| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | 33 | CRO, SEO, copywriting, growth, analytics + 60 CLI tools + MCP via Composio | 21.8k |
-| [ericosiu/ai-marketing-skills](https://github.com/ericosiu/ai-marketing-skills) | 25+ | Growth experiments, sales pipeline, content ops, outbound, SEO. Author's own framing: "battle-tested on real revenue" | 1.9k |
-| [realjaymes/marketingagentskills](https://github.com/realjaymes/marketingagentskills) | 25 | Strategy, content, CRO, automation, agent-skill-builder meta-skill | 23 |
-| [pawbytes/skill-suites](https://github.com/pawbytes/skill-suites) | 59 (23 marketing) | Five "skill suites" (marketing, creative, prodig, webinar, tools) under `src/`. Marketing skills live at `src/marketing/paw-mkt-*/`. | 22 |
-| [adobe/skills](https://github.com/adobe/skills) | 17 | Official Adobe skills repo. Currently AEM Edge Delivery Services (content development, migration, discovery). Structured to grow across Adobe products | 36 |
-| [BrianRWagner/ai-marketing-claude-code-skills](https://github.com/BrianRWagner/ai-marketing-claude-code-skills) | 17 | Cold outreach, homepage audit, social cards, and more | 236 |
-| [CosmoBlk/email-marketing-bible](https://github.com/CosmoBlk/email-marketing-bible) | 1 | 55K-word email marketing guide as an AI skill | 140 |
+| SENSE | last30days for "what are people saying"; ScrapeCreators or DataForSEO for data at volume; newsjack for press monitoring | Google Trends, Google Search Console, the X feed | Collection is near-automatic now; picking what to act on is still your job |
+| KNOW | Corey Haines's `product-marketing` context file (the one every other skill reads); the small-business plugin's brand style; Anthropic's `competitive-brief`. CRM hygiene: HubSpot `crm-data-quality`, small-business `crm-autopilot` | Your own folder of plain files: audience, brand, positioning, goals | Build this before any agent. It is the highest-leverage row in the Anatomy that is not a skill |
+| DECIDE | Corey Haines's `content-strategy`, `launch`, `pricing`; Zapier's campaign generator; Anthropic's `campaign-plan` | | Agents propose, a separate judge ranks, you pick |
+| MAKE | Anthropic's `draft-content` and `brand-review`; Corey Haines's copy and ads skills; Canva skills; no-ai-slop as the last pass | Canva free tier | Run a reviewer that is not the writer; keep the words that carry your name |
+| SHIP | To write it: Corey Haines's `emails`, `social`, `ads`. To run it: HubSpot `workflow-automation` and `audience-targeting`, the Klaviyo and HubSpot connectors, the small-business plugin's approval-gated send skills | Meta Business Suite, LinkedIn Campaign Manager | Anything that sends, posts or pays gets a human gate |
+| MULTIPLY | Corey Haines's `cro`; ScrapeCreators `content-repurposing`; Canva `resize-for-social-media`, `bulk-create`; Zapier's recording-to-clip | | The top-scored row in the Anatomy; also where automated volume gets accounts flagged |
+| MEASURE | Campaign reporting: Anthropic's `performance-report` with the HubSpot and Supermetrics connectors, the small-business `report-builder`. Search and AI-answer data: DataForSEO templates, Semrush skills | Google Search Console AI Overviews and AI Mode reports (free, worldwide since August 2026), GA4 | See the GEO stack below |
+| LEARN | Zapier's campaign post-mortem; Corey Haines's `ab-testing` and `referrals` | A lessons file your agent proposes additions to, and you approve | |
 
 ---
 
-## By Verb
+## The GEO measurement stack
 
-Skills and tools mapped to the [8 marketing verbs](MARKETING-ANATOMY.md#2-the-marketing-x-ray-8-universal-verbs) from the Anatomy framework. Each verb represents a recurring activity that spans marketing organizations of every size.
+GEO (generative engine optimization, some vendors say AEO) is showing up in AI answers. The free stack first, then pay only if you need cross-engine tracking:
 
-### SENSE: Watch the water for signals
+| Layer | Tool | Cost | What it shows |
+| --- | --- | --- | --- |
+| Pre-click visibility | Google Search Console, Search appearance filter and the generative-AI performance reports | Free | Impressions and clicks from AI Overviews and AI Mode, per page and query. All sites worldwide since 2026-08-31 |
+| Post-click behaviour | Google Analytics 4 | Free | What AI-referred visitors do. Note: GA4 does not separate AI Overview visits from organic, so it is blind to the source |
+| First look at your brand in AI answers | HubSpot AI Search Grader; Semrush AI Search Visibility Checker | Free, capped | A one-time read of whether answer engines mention you |
+| Cross-engine tracking | Peec (from $95 a month, MCP included, per its pricing page); Semrush AI Visibility Toolkit (about $99 a month, secondary source); DataForSEO AI Optimization API (pay per call) | Under $100 a month or per call, as checked 2026-11-04 | Prompt-list visibility across ChatGPT, Perplexity, Gemini, AI Overviews over time |
+| Enterprise AEO platforms | Conductor (AEO and SEO platform with an MCP server, apps in ChatGPT and Copilot, a data API; no public price); Profound (prompt-volume dataset and citation tracking; trial then enterprise) | Contact sales | Share of voice, sentiment, fan-out queries, crawler analytics across a large site estate |
 
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [customer-research](https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research) | Corey Haines | Structured customer research workflows - surveys, interviews, signal extraction |
-| [competitor-alternatives](https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-alternatives) | Corey Haines | Competitive intelligence and positioning against alternatives |
-| [last30days](https://github.com/mvanhorn/last30days-skill) | mvanhorn | Cross-platform trend research - aggregates Reddit, X, YouTube, HN, Polymarket, and 7 more into cited briefs |
-| [ScrapeCreators/agent-skills](https://github.com/ScrapeCreators/agent-skills) | ScrapeCreators (vendor-official) | Official Claude Agent Skill for the ScrapeCreators scraping API - 27+ social/search platforms (TikTok, IG, YT, LinkedIn, X, Reddit, Threads, Bluesky, Pinterest) plus FB/Google/LinkedIn ad libraries. Teaches endpoint routing, pagination, credit awareness, platform quirks. Vendor also ships hosted MCP at `api.scrapecreators.com/mcp` and npm CLI `@scrapecreators/cli` |
-| [Google Trends](https://trends.google.com) | Google (free) | Real-time search interest and trending topics; the simplest SENSE tool |
-| [X / Twitter](https://x.com) | X (free to browse) | Real-time public conversation - trending topics, hashtag monitoring, high-volume signal feed |
-
-### KNOW: Build and maintain audience intelligence
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [marketing-psychology](https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-psychology) | Corey Haines | Behavioral science and persuasion frameworks for audience understanding |
-| [icp-persona](https://github.com/realjaymes/marketingagentskills/tree/main/skills/icp-persona) | James (MIA) | ICP and persona builder from product marketing context |
-| [customer-segments](https://github.com/realjaymes/marketingagentskills/tree/main/skills/customer-segments) | James (MIA) | Audience segmentation skill |
-| [SparkToro](https://sparktoro.com) | Rand Fishkin | Audience intelligence - who they follow, read, listen to |
-
-### DECIDE: Choose what to say, to whom, when, for how much
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [content-strategy](https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy) | Corey Haines | Content strategy planning and editorial direction |
-| [pricing-strategy](https://github.com/coreyhaines31/marketingskills/tree/main/skills/pricing-strategy) | Corey Haines | Pricing page optimization, packaging, and positioning |
-| [marketing-ideas](https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas) | Corey Haines | Creative marketing idea generation from constraints |
-| [launch-strategy](https://github.com/coreyhaines31/marketingskills/tree/main/skills/launch-strategy) | Corey Haines | Product launch planning and GTM execution |
-| [product-positioning](https://github.com/realjaymes/marketingagentskills/tree/main/skills/product-positioning) | James (MIA) | Positioning and messaging framework |
-| [marketing-sostac](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-sostac) | pawbytes | SOSTAC strategic marketing plan builder |
-
-### MAKE: Produce the assets
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [copywriting](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting) | Corey Haines | Write and rewrite marketing copy for landing pages, homepages, ads |
-| [copy-editing](https://github.com/coreyhaines31/marketingskills/tree/main/skills/copy-editing) | Corey Haines | Edit and improve existing marketing copy |
-| [ad-creative](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ad-creative) | Corey Haines | Generate, iterate, and scale ad creative across formats |
-| [lead-magnets](https://github.com/coreyhaines31/marketingskills/tree/main/skills/lead-magnets) | Corey Haines | Create lead magnets that convert |
-| [email-marketing-bible](https://github.com/CosmoBlk/email-marketing-bible) | CosmoBlk | Comprehensive email marketing skill (55K words) |
-| [content-ops](https://github.com/ericosiu/ai-marketing-skills/tree/main/content-ops) | Eric Osiu | Content quality scoring and production pipeline |
-| [Canva](https://canva.com) | Canva | Design templates, brand kit - the solo/SMB design standard |
-| [Midjourney](https://midjourney.com) / [DALL-E](https://openai.com/dall-e) | Various | AI image generation - use with brand guidelines as constraints |
-
-### SHIP: Push to channels, on schedule, in the right language
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [email-sequence](https://github.com/coreyhaines31/marketingskills/tree/main/skills/email-sequence) | Corey Haines | Build email sequences, drip campaigns, lifecycle flows |
-| [cold-email](https://github.com/coreyhaines31/marketingskills/tree/main/skills/cold-email) | Corey Haines | Cold email outreach sequences |
-| [social-content](https://github.com/coreyhaines31/marketingskills/tree/main/skills/social-content) | Corey Haines | Social media content creation and scheduling |
-| [paid-ads](https://github.com/coreyhaines31/marketingskills/tree/main/skills/paid-ads) | Corey Haines | Paid advertising strategy and execution |
-| [programmatic-seo](https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo) | Corey Haines | Programmatic SEO page generation at scale |
-| [outbound-engine](https://github.com/ericosiu/ai-marketing-skills/tree/main/outbound-engine) | Eric Osiu | Cold outbound automation pipeline |
-| [marketing-email](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-email) | pawbytes | Email marketing skill with lifecycle orchestration |
-| [marketing-social](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-social) | pawbytes | Social media marketing and publishing |
-| [marketing-paid-ads](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-paid-ads) | pawbytes | Paid advertising strategy and management |
-| [x-article-publisher](https://github.com/wshuyi/x-article-publisher-skill) | wshuyi | Publish articles to X/Twitter |
-
-### MULTIPLY: Reshape and personalize what you already made
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [page-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/page-cro) | Corey Haines | Landing page conversion rate optimization |
-| [signup-flow-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/signup-flow-cro) | Corey Haines | Signup flow optimization |
-| [form-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/form-cro) | Corey Haines | Form conversion optimization |
-| [popup-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/popup-cro) | Corey Haines | Popup conversion optimization |
-| [onboarding-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/onboarding-cro) | Corey Haines | User onboarding flow optimization |
-| [paywall-upgrade-cro](https://github.com/coreyhaines31/marketingskills/tree/main/skills/paywall-upgrade-cro) | Corey Haines | Paywall and upgrade conversion optimization |
-| [ab-test-setup](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-test-setup) | Corey Haines | A/B test design, setup, and analysis |
-| [marketing-cro](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-cro) | pawbytes | Conversion rate optimization suite |
-| [experimentation](https://github.com/realjaymes/marketingagentskills/tree/main/skills/experimentation) | James (MIA) | Experiment design and growth testing |
-
-### MEASURE: Attribute, dashboard, analyze
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [analytics-tracking](https://github.com/coreyhaines31/marketingskills/tree/main/skills/analytics-tracking) | Corey Haines | Analytics setup, tracking plans, event architecture |
-| [marketing-analytics](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-analytics) | pawbytes | Measurement and tracking skill |
-| [revenue-intelligence](https://github.com/ericosiu/ai-marketing-skills/tree/main/revenue-intelligence) | Eric Osiu | Gong-based sales call insights + attribution pipeline |
-| [Google Analytics 4](https://analytics.google.com) | Google (free) | Universal web analytics starting point |
-| [Google Search Console](https://search.google.com/search-console) | Google (free) | Organic search performance and SEO health |
-
-### LEARN: Close the loop, update the playbook
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [referral-program](https://github.com/coreyhaines31/marketingskills/tree/main/skills/referral-program) | Corey Haines | Referral and word-of-mouth program design |
-| [churn-prevention](https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention) | Corey Haines | Churn analysis and retention strategy |
-| [marketing-retention](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-retention) | pawbytes | Churn reduction and win-back skill |
-| [revops](https://github.com/coreyhaines31/marketingskills/tree/main/skills/revops) | Corey Haines | Revenue operations - bridging marketing, sales, and CS |
+The Anatomy scores AI-visibility tracking at T2 and warns that tracking alone does not change the answer; pair it with agent-readable pages (SHIP).
 
 ---
 
-## SEO & Discovery (cross-cutting)
+## How to vet a skill before you install it
 
-SEO spans SENSE (keyword research), DECIDE (content strategy), MAKE (content creation), and SHIP (publishing). These skills treat it as a unified discipline.
+A skill is software that runs with your agent's permissions, written in a format where the payload can be plain prose. Treat it like installing software.
 
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [seo-audit](https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit) | Corey Haines | Comprehensive SEO audit workflow |
-| [ai-seo](https://github.com/coreyhaines31/marketingskills/tree/main/skills/ai-seo) | Corey Haines | AI-native SEO content strategy |
-| [schema-markup](https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema-markup) | Corey Haines | Structured data and schema markup |
-| [site-architecture](https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture) | Corey Haines | Site structure and information architecture for SEO |
-| [claude-seo](https://github.com/AgriciDaniel/claude-seo) | AgriciDaniel | Universal SEO skill for website analysis and optimization |
-| [seo-ops](https://github.com/ericosiu/ai-marketing-skills/tree/main/seo-ops) | Eric Osiu | SEO intelligence - content attack briefs, trend scouting, GSC integration |
-| [marketing-seo](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-seo) | pawbytes | SEO and organic search skill |
+1. **Read `SKILL.md` and every bundled file** (scripts, images, references) yourself, in a browser, before the agent does. Do not ask your agent whether a skill is safe: the injection is aimed at the agent. Anthropic's own guidance: use skills "only from trusted sources: those you created yourself or obtained from Anthropic", and audit everything else. Watch for network calls, file access outside the task, and instructions aimed at the agent rather than at you. Plugins can also bundle hooks and connector definitions (`.mcp.json`) that run without the model choosing to; read those too.
+2. **Treat skills that fetch external URLs as high risk.** A trusted skill turns hostile the day its dependency changes.
+3. **Run a scanner, then still read it.** [SkillSpector](https://github.com/NVIDIA/SkillSpector) (NVIDIA, Apache 2.0, CLI and MCP) scores risk 0 to 100. In independent tests it caught a planted honeypot, but rewritten payloads slipped past it 97 percent of the time, 16 of its 20 findings on one legitimate skill were false positives, and two scanners run on the same 1,302 skills agreed only weakly. A scanner is a filter, not a judgment.
+4. **Do not trust star counts or download counts as safety.** Both can be bought or inflated.
+5. **Keep a saved copy of the version you tested.** Install from a specific commit or release, no `--yes` flags and no auto-update, and put a business edit to a skill through the same review as any production change (Anatomy, Commandment 3 and Section 5.6).
+6. **Contain the first run.** Try a new skill in a disposable workspace with synthetic data, no real API keys or OAuth tokens (scoped test credentials, revoked afterwards), the minimum permissions, and approval required for anything that sends, writes or spends, before it touches real accounts.
+7. **The one-month rule.** If you did not reach for it again within a month, delete it. Unused skills bloat the agent's context, and two skills with similar descriptions will answer the same request.
 
----
+If you cannot read the scripts, ask someone who can, or stay with prose-only skills, and follow your company's software approval process; a skill is software.
 
-## AI Visibility (GEO) — cross-cutting
-
-GEO (Generative Engine Optimization; some vendors call it AEO = Answer Engine Optimization) spans SENSE (prompt-demand data), MEASURE (AI-visibility tracking + AI-crawler analytics), and SHIP (content optimization for AI answer engines). Measuring and shaping brand presence inside ChatGPT, Perplexity, Google AI Overviews, Gemini, and Claude.
-
-| Skill / Tool | Source | What it does |
-| --- | --- | --- |
-| [Profound MCP](https://docs.tryprofound.com/agent-apis/mcp/overview) | Profound (vendor-official, launched 2026-03-31) | Hosted MCP at `mcp.tryprofound.com`, local MCP (`npx profound-mcp`), Python SDK (`pip install profound`), TypeScript SDK (`bun install profoundai`). Visibility reports, citation tracking, sentiment, bot/agent analytics, docs search. API access is Enterprise-tier. Full review: [work/tool-reviews/profound.md](work/tool-reviews/profound.md) |
-
-*Terminology note: house term is GEO. Profound and HubSpot use AEO for their own products; those usages are preserved in vendor-specific notes and not rewritten.*
+The numbers behind this: Snyk's ToxicSkills audit (February 2026) scanned 3,984 skills from two public registries and found a critical issue in 13.4 percent and 76 human-confirmed malicious payloads, 91 percent of which combined code with prompt injection written in Markdown; a second study of 31,132 skills (Liu et al., "Agent Skills in the Wild", 2026) found vulnerabilities in 26 percent and likely malicious intent in 5 percent. The Agentic AI Foundation's roadmap proposes vetting guidance for skill authors and installers; as of this check it is proposed, not published.
 
 ---
 
-## Standards & Protocols
+## Standards and protocols
 
-The infrastructure layer that makes marketing skills portable and connectable.
-
-| Standard | What it is | Why it matters |
+| Standard | What it is | Status 2026-11-04 |
 | --- | --- | --- |
-| [Agent Skills spec](https://agentskills.io) | Open format for giving agents new capabilities (SKILL.md files) | Compatible with 30+ tools listed on agentskills.io, including Claude Code, Claude, Cursor, VS Code, GitHub Copilot, OpenAI Codex, Gemini CLI, Goose, OpenHands, and Kiro. Build once, run everywhere. [Adobe has adopted the spec](https://developer.adobe.com/app-builder/docs/resources/ai-use-cases) for App Builder integrations (AEM, Workfront, Target, Marketo). |
-| [Model Context Protocol (MCP)](https://modelcontextprotocol.io) | Open standard for connecting AI models to external tools and data sources | The nervous system: how agents securely reach your CMS, CRM, DAM, analytics. |
-| [A2A](https://github.com/a2aproject/A2A) | Agent-to-Agent protocol for cross-framework communication | Agents talking to agents: emerging standard for multi-agent orchestration. Originated at Google, now maintained under the `a2aproject` organization. |
-| [Composio MCP](https://composio.dev) | OAuth-heavy app integrations exposed via MCP (Composio advertises 500+ tools) | HubSpot, Salesforce, Slack, and similar made agent-accessible. Used by Corey Haines' marketingskills. |
+| [Agent Skills](https://agentskills.io) | The open format for giving agents a capability as a `SKILL.md` folder | Donated by Anthropic to the Agentic AI Foundation (Linux Foundation) on 2026-10-22; Anthropic's announcement counts more than seventy supporting platforms, naming ChatGPT, Cursor, GitHub Copilot and VS Code, and Codex and Gemini CLI document support in their own docs. agentskills.io is the specification; it has no skill directory. (agenticskills.io is a separate third-party directory.) |
+| [Model Context Protocol](https://modelcontextprotocol.io) | How agents reach tools and data | Under the same foundation since December 2025; current spec revision 2026-07-28. Authorization (OAuth 2.1) is specified in the protocol and marked optional, so a connection is as secure as your deployment |
+| [AGENTS.md](https://agents.md) | The instruction-file convention agents read on start | A foundation project; the vendor-neutral instruction file that several agents read alongside their own |
+| [A2A](https://github.com/a2aproject/A2A) | Agent-to-agent messaging | A project of the same foundation since August 2026 |
+| [Composio](https://composio.dev) | Hosted OAuth integrations exposed to agents (1,500-plus toolkits) | Still the integration layer behind several packs; free hobby tier, paid from $29 a month, pricing changed several times in 2026 |
 
 ---
 
-## Awesome Lists by Others
+## Lists by others
 
-Curated lists maintained by the community. Each covers a slice of the marketing + AI agent ecosystem.
-
-| List | Focus | Stars |
+| List | Focus | Stars (2026-11-04) |
 | --- | --- | --- |
-| [awesome-ai-marketing](https://github.com/jmedia65/awesome-ai-marketing) (jmedia65) | AI marketing tools with honest context on when each works | 3 |
-| [awesome-ai-marketing](https://github.com/alternbits/awesome-ai-marketing) (alternbits) | AI tools for marketing professionals by category | 124 |
-| [awesome-agentic-advertising](https://github.com/jshorwitz/awesome-agentic-advertising) | MCP servers for ad platforms - Google, Meta, LinkedIn, TikTok, X | 15 |
-| [awesome-ai-seo](https://github.com/best-of-ai/awesome-ai-seo) | AI SEO tools, platforms, prompts, and resources | 212 |
-| [awesome-ai-gtm](https://github.com/hculap/awesome-ai-gtm) | AI Go-to-Market stack - ideation through customer success | 4 |
-| [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) (VoltAgent) | 1000+ agent skills from official dev teams, includes marketing section | 16.2k |
-| [awesome-llm-skills](https://github.com/Prat011/awesome-llm-skills) | LLM skills across all domains, includes marketing category | 1.1k |
-| [awesome-ai-agents-2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) | 340+ AI agents, frameworks, and tools across 20+ categories | 318 |
+| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | 1,000-plus agent skills from official teams and the community, with a marketing section | 36.9k |
+| [awesome-ai-seo](https://github.com/best-of-ai/awesome-ai-seo) | AI SEO tools, platforms, prompts | 324 |
+| [awesome-agentic-advertising](https://github.com/jshorwitz/awesome-agentic-advertising) | MCP servers for ad platforms: Google, Meta, LinkedIn, TikTok, X | 46 |
+| [awesome-llm-skills](https://github.com/Prat011/awesome-llm-skills) | LLM skills across domains, marketing category included | 1.8k |
+| [awesome-ai-gtm](https://github.com/hculap/awesome-ai-gtm) | AI go-to-market stack, ideation through customer success | 21 |
+| [awesome-ai-marketing](https://github.com/alternbits/awesome-ai-marketing) | AI tools for marketers by category | 147 |
+
+One independent roundup worth reading before you pick a pack: Mission Growth's October 2026 review of 29 marketing skill repositories, each with a "skip it if" note.
 
 ---
 
-## Meta-Skills & Orchestration
+*Checked 2026-11-04. To re-check: `python scripts/check_links.py` (needs the GitHub CLI) writes a dated report under `research/`. If a link is dead or a pack is missing, open an issue or a pull request.*
 
-Skills that coordinate other skills or help build new ones.
-
-| Skill | Source | What it does |
-| --- | --- | --- |
-| [marketing-agency](https://github.com/pawbytes/skill-suites/tree/main/src/marketing/paw-mkt-agency) | pawbytes | Coordinator agent: routes any marketing task to the right specialist skill |
-| [agent-skill-builder](https://github.com/realjaymes/marketingagentskills/tree/main/skills/agent-skill-builder) | James (MIA) | Create new skills from scratch or translate ChatGPT projects into Agent Skills format |
-| [product-marketing-context](https://github.com/coreyhaines31/marketingskills/tree/main/skills/product-marketing-context) | Corey Haines | Shared context file read by all skills: reduces repetitive questions across workflows |
-| [growth-engine](https://github.com/ericosiu/ai-marketing-skills/tree/main/growth-engine) | Eric Osiu | Autonomous marketing experiments that run, measure, and optimize themselves |
-
----
-
-*Star counts approximate as of April 2026. Links verified against public GitHub repos. If you find a broken link or want to suggest an addition, open an issue or PR.*
+*If you're bringing AI into a marketing team and want someone who has lived on both sides of that gap (engineering and the business), let's talk about what's in the way: [linkedin.com/in/magmainc](https://www.linkedin.com/in/magmainc).*

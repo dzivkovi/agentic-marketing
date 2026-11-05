@@ -8,6 +8,28 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ---
 
+## 2026-11-04
+
+### The list got shorter: what the six-month check showed
+
+The first API check of the April list (20 repositories, 51 deep links) found every repository alive and 18 deep links dead. The dead links were all inside packs that had renamed or merged skills; `coreyhaines31/marketingskills` v2.0 (May 2026) alone renamed 17 and merged two. Lesson for the list: link packs, never individual skills, unless the skill is the whole repo. The `scripts/check_links.py` run now backs the "Checked" date on the page.
+
+### Three signals that a wide list is the wrong shape
+
+From six months of practitioner talk: (1) usage decays fast ("cool for about a day, but then I never used them again"; a usage audit found 121 installed skills bloating one agent's context); (2) generic skills are the ones that decay ("generic skills are extremely worthless"; the one habit that survives is taking a single skill from a pack and training it on your own voice); (3) the registries show it (about a third of a top-300 sample have one commit; no marketing skill in the largest registry's most-installed ten). The counterpoint, from the keystone pack's author: installing many skills does "no harm", but you still want a curated favourites list. The page now says all of this in its opening instead of implying coverage is the value.
+
+### Vendor surfaces are the new entrants, and they come with funnels
+
+Between May and November the data vendors shipped their own skills and plugins on top of MCP: Canva, Semrush, DataForSEO, HubSpot, Zapier. Two patterns to record for future rows. First, the price gate is the real filter for Solo readers: of the vendor surfaces checked, only DataForSEO (pay as you go) and ScrapeCreators (free credits then from $47) are reachable without an enterprise or API-tier plan; Conductor has no public price, Semrush needs API access, Similarweb a Business plan. Second, several packs are the free end of a paid funnel (Magister behind `marketingskills`, Medialyst behind `newsjack`), and one vendor offers credits for a GitHub star. The list states these as facts in the row, with the independent use the research found beside them; the "maps, not report cards" rule means it does not score them.
+
+### Skill security is now a section, not a footnote
+
+Snyk's ToxicSkills audit (3,984 skills, 13.4% with a critical issue, 76 confirmed malicious, 91% of those mixing code with Markdown prompt injection) and the 31,132-skill study (26% vulnerable, 5% likely malicious) make vetting part of using any list. Scanners help and mislead at once: SkillSpector caught a planted honeypot and produced about 80% false positives on a legitimate skill; two scanners on one corpus agreed only weakly. The page's vetting rules therefore lead with reading the files, use a scanner as a filter, and pin what is kept. The Agentic AI Foundation's vetting guidance is planned, not published; revisit when it lands.
+
+### Two names that are not the same thing
+
+agentskills.io is the specification (now under the Agentic AI Foundation) and hosts no skill directory. agenticskills.io is a separate third-party directory. The April page conflated them under "AgenticSkills.io"; the Anatomy carried the same slip and both are corrected.
+
 ## 2026-07-20
 
 ### Editorial reset: maps, not report cards
