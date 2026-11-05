@@ -2,7 +2,7 @@
 
 Before you buy an AI tool for marketing, know which of the eight kinds of marketing work it does. Most vendors are selling you one verb and calling it the whole job.
 
-This repository is a method, not a tool list. It decomposes marketing into eight verbs that every marketing organization performs, from a solo operator to a global brand, scores forty-plus activities by how much an AI agent can actually do today, and says which ones are worth doing yourself, hiring out, or buying. It was written from practice and is used in production every month.
+This repository is a method, not a tool list. It decomposes marketing into eight verbs that every marketing organization performs, from a solo operator to a global brand, scores forty-plus activities by how much an AI agent can actually do today, and says which ones are worth doing yourself, hiring out, or buying. It was written from practice, is used in production every month, and is re-checked against practitioner evidence every six months (last: 2026-11-04).
 
 **Start here: [MARKETING-ANATOMY.md](MARKETING-ANATOMY.md)**, the whole method in one document. The rest of this page is the short version.
 
@@ -13,7 +13,7 @@ This repository is a method, not a tool list. It decomposes marketing into eight
 These eight activities recur across most marketing organizations. Each maps to scored activities and size-fit guidance in [section 2 of the Anatomy](MARKETING-ANATOMY.md#2-the-marketing-x-ray-8-universal-verbs).
 
 1. **SENSE** - Watch the market for signals. What changed this week: trends, competitors, regulators, search demand, what customers are saying. Continuous.
-2. **KNOW** - Build and maintain audience intelligence. Who you are talking to and what they bite on: ICPs, personas, jobs to be done, journey maps, vocabulary. Infrastructure: built once, refreshed quarterly, reused by every campaign. Know is only the reader; a verified market fact is Sense, a voice rule is Make.
+2. **KNOW** - Build and maintain audience intelligence. Who you are talking to and what they bite on: ICPs, personas, jobs to be done, journey maps, vocabulary, and the plain files that hold them, which every agent reads before it acts (the context layer). Infrastructure: built once, revised from evidence as Sense feeds it, curated by a human, reused by every campaign. A verified market fact is Sense, a voice rule is Make.
 3. **DECIDE** - Choose what to say, to whom, when, for how much. Where Sense meets Know.
 4. **MAKE** - Produce the assets and survive compliance review.
 5. **SHIP** - Push to channels, on schedule, in the right language.
@@ -21,7 +21,7 @@ These eight activities recur across most marketing organizations. Each maps to s
 7. **MEASURE** - Attribute, dashboard, analyze.
 8. **LEARN** - Close the loop, update the playbook.
 
-The Sense/Know split is the one line no established framework draws, and it is the one that matters most for agents: Sense is an always-running skill, Know is a quarterly-refresh asset. In one breath: Sense is the sonar, Know is the chart, Decide is where you cast. How the verbs map to Kotler, SOSTAC, RACE and the 4Ps, and where those frameworks have no equivalent, is [section 2.9](MARKETING-ANATOMY.md#29-mapping-to-established-frameworks).
+The Sense/Know split is the one line no established framework draws, and it is the one that matters most for agents: Sense is an always-running skill, Know is the asset it writes into and a human curates. In one breath: Sense is the sonar, Know is the chart, Decide is where you cast. How the verbs map to Kotler, SOSTAC, RACE and the 4Ps, and where those frameworks have no equivalent, is [section 2.9](MARKETING-ANATOMY.md#29-mapping-to-established-frameworks).
 
 ---
 
@@ -48,12 +48,12 @@ Every recommendation in this framework is anchored to these principles, each one
 1. **Empathy before architecture.** Discovery and definition come before any boxes on a diagram.
 2. **Catalyst, not blank page.** Arrive with working samples so stakeholders react, not stare.
 3. **Co-Create - don't ping-pong.** Business owns the logic in plain text; IT owns the governance wrapper.
-4. **Decouple logic from platform.** The Agentic Skill is the portable unit - avoid unnecessary vendor lock-in.
-5. **Augment, don't replace.** Agents produce drafts; humans approve anything that changes state.
-6. **Default-deny MCP writes.** Read-only by default. Write access requires explicit authorization.
-7. **Observability is Day 1, not Day 2.** Guardrails, evals, and tracing ship with the first skill.
+4. **Decouple logic from platform.** The Agentic Skill is the portable unit: portable by design, proven by a run on a second host.
+5. **Augment, don't replace.** Agents act within explicit authority and budgets; a human approves what cannot be undone.
+6. **Default-deny MCP writes.** Read-only by default. Write access requires explicit authorization, and each agent gets its own identity.
+7. **Observability is Day 1, not Day 2.** Tracing, evals and an audit log ship with the first skill, and so do the limits: spend, turns, wall clock, sandbox.
 
-The full reasoning behind each commandment is in [section 1 of the Anatomy](MARKETING-ANATOMY.md#1-the-7-commandments).
+The full reasoning behind each commandment is in [section 1 of the Anatomy](MARKETING-ANATOMY.md#1-the-7-commandments). Commandments 4, 5 and 7 were reworded in November 2026 after six months of practitioner evidence; the April wording and why it changed are in [CHANGELOG v2.3](CHANGELOG.md).
 
 ---
 
