@@ -61,7 +61,7 @@ The full reasoning behind each commandment is in [section 1 of the Anatomy](MARK
 
 You do not need to review every marketing AI tool. You need a 20-minute way to review the one in front of you. [specs/tool-review.md](specs/tool-review.md) is that procedure: five legs, ending in a three-state verdict (`Wrapper`, `Hybrid`, `Hard`), a persona-relative skill-gap call, the verb fit, and a check whether the vendor already ships an MCP, CLI or Agent Skill, which often ends the "should we wrap this ourselves" question before it starts. In Claude Code, `/review-tool <name>` runs it ([.claude/commands/review-tool.md](.claude/commands/review-tool.md)).
 
-Worked reviews and the vendor-by-verb companion live in [research/](research/README.md), dated. Tools change monthly; the verbs do not. [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) is a hand-verified list of open-source agent skills and tools by verb, for readers who want something they can use today.
+Worked reviews and the vendor-by-verb companion live in [research/](research/README.md), dated. Tools change monthly; the verbs do not. [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) is a short, checked list of skill packs and vendor agent surfaces by verb, for readers who want something they can use today, with the habit that keeps it useful: one skill at a time, read before you run it, gone if unused in a month.
 
 ---
 
@@ -80,7 +80,8 @@ Worked reviews and the vendor-by-verb companion live in [research/](research/REA
 | [ABOUT.md](ABOUT.md) | The origin story: from fishing to real estate marketing to enterprise AI architecture |
 | [CHANGELOG.md](CHANGELOG.md) | Release history: what shipped in each tagged version |
 | [specs/tool-review.md](specs/tool-review.md) | The 20-minute tool review procedure |
-| [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) | Curated, hand-verified list of marketing agent skills and tools, by verb |
+| [AWESOME-MARKETING-SKILLS.md](AWESOME-MARKETING-SKILLS.md) | A short, checked list of marketing skill packs, vendor agent surfaces and free tools, by verb, with a section on how to vet a skill |
+| [scripts/check_links.py](scripts/check_links.py) | Re-checks every GitHub link in the list against the live API (stars, last push, dead paths) and writes a dated report |
 | [CURATION-LOG.md](CURATION-LOG.md) | Editorial journal behind the list: caveats, gaps, patterns, open questions |
 | [research/](research/README.md) | Dated evidence: worked tool reviews, the vendor-by-verb companion, practitioner corpus studies |
 | [images/](images/) | Supporting images |
@@ -91,7 +92,7 @@ Worked reviews and the vendor-by-verb companion live in [research/](research/REA
 
 I'm Daniel Zivkovic, an AI Architect based in Toronto. I spent a decade building marketing technology (CMS, SEO, lead scoring, audience segmentation) and another decade building enterprise AI systems (Nasdaq, Siemens, Google Cloud PSO). In 2026, those two threads converged. The full story is in [ABOUT.md](ABOUT.md).
 
-If any of this resonates, I'd enjoy the conversation: [LinkedIn](https://www.linkedin.com/in/magmainc) | [magmainc.ca](https://magmainc.ca)
+If you're bringing AI into a marketing team and want someone who has lived on both sides of that gap (engineering and the business), let's talk about what's in the way: [LinkedIn](https://www.linkedin.com/in/magmainc) | [magmainc.ca](https://magmainc.ca)
 
 ---
 
