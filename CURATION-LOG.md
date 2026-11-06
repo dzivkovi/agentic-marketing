@@ -8,6 +8,16 @@ As the skill ecosystem grows, so does the uncertainty about how to organize it. 
 
 ---
 
+## 2026-11-06
+
+### Scanner guidance rewritten around findings and agreement, with a benchmark table
+
+Step 3 of the vetting rules used to name one scanner and carry four figures whose sources could not be located in the research notes (a honeypot catch, 16 of 20 findings false on one skill, weak agreement across 1,302 skills, a 97 percent bypass rate); they were removed rather than kept unsourced. Two benchmark studies now anchor the step: Liatrio (2026-08-12, five scanners, LLM and static modes) and Adversa (2026-07-30, eight scanners, static configurations). Their results do not blend: Liatrio's false-positive rates are LLM-mode on its own test sets, Adversa's are static-mode on MalSkillBench, so the page quotes them separately. The step now says: use the LLM mode, read every finding, treat two-scanner agreement as a review-priority signal (Liatrio's three-way agreement cut false alarms to 2 percent but still missed 9 to 11 percent of malicious skills), keep the report with the pinned version. A table after the list carries the per-scanner numbers so marketers do not have to parse benchmark methodology inside a numbered step.
+
+A local observation, kept out of the page because it is a check and not a rate: in two recorded LLM runs per skill, SkillSpector 2.12.0 marked two of three Markdown-only skills we wrote DO_NOT_INSTALL with scores from 56 to 72, and findings its own second-pass review marked "disagreed" still contributed to those scores; one Cisco skill-scanner 2.3.2 run in LLM mode reported all three as safe with three LOW and four INFO findings (individual findings were not retained). The guidance now distinguishes published benchmark results from this kind of limited local check.
+
+**Open question:** Snyk Agent Scan is cloud-based and its current access terms and any usage limits are not documented in either study; confirm before recommending it first to a regulated team. The Snyk row therefore carries a policy caveat rather than a "start here".
+
 ## 2026-11-04
 
 ### The list got shorter: what the six-month check showed
